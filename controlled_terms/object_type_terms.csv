@@ -1,0 +1,33 @@
+term,file_type,metadata_level
+Vector,SHP,Layer
+Vector,,Layer
+LIDAR,LAS,Layer
+LIDAR,LAZ,Layer
+Raster,DEM,Layer
+Raster,GeoTIFF,Layer
+Raster,,Layer
+Tabular,CSV,Layer;Artifact
+Tabular,XLS,Layer;Artifact
+Tabular,XLSX,Layer;Artifact
+Document,PDF,Artifact
+Document,DOCX,Artifact
+Image,PNG,Artifact
+Image,JPG,Artifact
+Image,,Artifact
+Plain Text,TXT,Artifact
+Formatted Text,MD,Artifact
+Formatted Text,GeoJSON,Layer
+Formatted Text,JSON,Artifact
+Formatted Text,XML,Artifact
+Formatted Text,YML,Artifact
+Formatted Text,,Artifact
+Model,,Artifact
+Code,Python,Artifact
+Code,R,Artifact
+Code,JavaScript,Artifact
+Code,,Artifact
+Binary,NetCDF,Layer;Artifact
+Binary,,Layer;Artifact
+Database ,GDB,Layer
+Database ,,Layer;Artifact
+Other,,Layer;Artifact
