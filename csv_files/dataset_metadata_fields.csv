@@ -1,0 +1,15 @@
+,status,metadata_level,metadata_group,display_name,definition,use,use_condition,repeatable,validation,published_terms
+14,Public,Dataset,Administrative,License,License associated with the resource.,Optional,None,No,Text,None
+15,Public,Dataset,Administrative,Metadata Date,Date the metadata record was last updated.,Required,None,No,Date: ISO 8601,None
+16,Public,Dataset,Administrative,Use Constraint,Constraints or restrictions on use of the resource.,Required,None,Yes,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/use_constraint_terms.csv
+27,Public,Dataset,Contact Information,Contact Affiliation,Organizational affiliation for the responsible point of contact.,Recommended,None,Yes,Text or Controlled Terms,TBD
+26,Public,Dataset,Contact Information,Contact Email,Email for the responsible point of contact.,Conditionally Required,Contact Name,Yes,Text,None
+25,Public,Dataset,Contact Information,Contact Name,Name of the responsible point of contact.,"Required for Dataset, Optional at lower levels",None,Yes,Text,None
+28,Public,Dataset,Contact Information,Contact Role,The role or responsibility of the point of contact.,Conditionally Required,Contact Name,Yes,Controlled Terms,TBD
+32,Public,Dataset,Coverage,Spatial Extent (Decimal Degrees),Coordinates for the bounding box describing the extent of the resource in decimal degrees.,Recommended,None,Yes,Array: Decimal Degrees or Geometry: Polygon,None
+49,Public,Dataset,Discovery,Description ,"An account of the resource. Description may include but is not limited to: an abstract, a table of contents, or a free-text account of the resource.",Required,None,No,Text,None
+47,Public,Dataset,Discovery,Keyword Term,Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.,Conditionally Required,Keyword Vocabulary,Yes,Array:Text,None
+46,Public,Dataset,Discovery,Keyword Vocabulary,Vocabulary for subject matter keywords listed in Keyword Term.,Conditionally Required,Keyword Terms,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_vocabulary_terms.csv
+50,Public,Dataset,Discovery,Purpose,Purpose for the creation of this resource and/or expected use.,Optional,None,No,Text,None
+48,Public,Dataset,Discovery,Title,A name given to the resource.,Required,None,No,Text,None
+56,Public,Dataset,Reuse,Provenance,"A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the resource.",Recommended,None,Yes,Text,None
