@@ -23,6 +23,124 @@ Each metadata field below is defined with the following elements:
 - **Format**: Indication of the type of value the field takes, this will be used for validation.
 - **Controlled Terms URL**: A link to published terms that are valid.
 
+## Dataset
+### Administrative
+**Field Name**: License  
+**Description**: License associated with the resource.  
+**Use**: Optional  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Metadata Date  
+**Description**: Date the metadata record was last updated.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Date: ISO 8601  
+**Controlled Terms URL**: None  
+
+**Field Name**: Use Constraint  
+**Description**: Constraints or restrictions on use of the resource.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/use_constraint_terms.csv  
+
+### Contact Information
+**Field Name**: Contact Affiliation  
+**Description**: Organizational affiliation for the responsible point of contact.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Text or Controlled Terms  
+**Controlled Terms URL**: TBD  
+
+**Field Name**: Contact Email  
+**Description**: Email for the responsible point of contact.  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Name  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Contact Name  
+**Description**: Name of the responsible point of contact.  
+**Use**: Required for Dataset, Optional at lower levels  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Contact Role  
+**Description**: The role or responsibility of the point of contact.  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Name  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: TBD  
+
+### Coverage
+**Field Name**: Spatial Extent (Decimal Degrees)  
+**Description**: Coordinates for the bounding box describing the extent of the resource in decimal degrees.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Array: Decimal Degrees or Geometry: Polygon  
+**Controlled Terms URL**: None  
+
+### Discovery
+**Field Name**: Description   
+**Description**: An account of the resource. Description may include but is not limited to: an abstract, a table of contents, or a free-text account of the resource.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Keyword Term  
+**Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
+**Use**: Conditionally Required  
+**Use Condition**: Keyword Vocabulary  
+**Accepts Multiple Values**: Yes  
+**Format**: Array:Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Keyword Vocabulary  
+**Description**: Vocabulary for subject matter keywords listed in Keyword Term.  
+**Use**: Conditionally Required  
+**Use Condition**: Keyword Terms  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_vocabulary_terms.csv  
+
+**Field Name**: Purpose  
+**Description**: Purpose for the creation of this resource and/or expected use.  
+**Use**: Optional  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Title  
+**Description**: A name given to the resource.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+### Reuse
+**Field Name**: Provenance  
+**Description**: A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the resource.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
 ## Artifact
 ### Access
 **Field Name**: Distribution Method  
@@ -268,185 +386,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: Processing Step Date  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
-**Controlled Terms URL**: None  
-
-## Dataset
-### Administrative
-**Field Name**: License  
-**Description**: License associated with the resource.  
-**Use**: Optional  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Text  
-**Controlled Terms URL**: None  
-
-**Field Name**: Metadata Date  
-**Description**: Date the metadata record was last updated.  
-**Use**: Required  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Date: ISO 8601  
-**Controlled Terms URL**: None  
-
-**Field Name**: Use Constraint  
-**Description**: Constraints or restrictions on use of the resource.  
-**Use**: Required  
-**Use Condition**: None  
-**Accepts Multiple Values**: Yes  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/use_constraint_terms.csv  
-
-### Contact Information
-**Field Name**: Contact Affiliation  
-**Description**: Organizational affiliation for the responsible point of contact.  
-**Use**: Recommended  
-**Use Condition**: None  
-**Accepts Multiple Values**: Yes  
-**Format**: Text or Controlled Terms  
-**Controlled Terms URL**: TBD  
-
-**Field Name**: Contact Email  
-**Description**: Email for the responsible point of contact.  
-**Use**: Conditionally Required  
-**Use Condition**: Contact Name  
-**Accepts Multiple Values**: Yes  
-**Format**: Text  
-**Controlled Terms URL**: None  
-
-**Field Name**: Contact Name  
-**Description**: Name of the responsible point of contact.  
-**Use**: Required for Dataset, Optional at lower levels  
-**Use Condition**: None  
-**Accepts Multiple Values**: Yes  
-**Format**: Text  
-**Controlled Terms URL**: None  
-
-**Field Name**: Contact Role  
-**Description**: The role or responsibility of the point of contact.  
-**Use**: Conditionally Required  
-**Use Condition**: Contact Name  
-**Accepts Multiple Values**: Yes  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: TBD  
-
-### Coverage
-**Field Name**: Spatial Extent (Decimal Degrees)  
-**Description**: Coordinates for the bounding box describing the extent of the resource in decimal degrees.  
-**Use**: Recommended  
-**Use Condition**: None  
-**Accepts Multiple Values**: Yes  
-**Format**: Array: Decimal Degrees or Geometry: Polygon  
-**Controlled Terms URL**: None  
-
-### Discovery
-**Field Name**: Description   
-**Description**: An account of the resource. Description may include but is not limited to: an abstract, a table of contents, or a free-text account of the resource.  
-**Use**: Required  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Text  
-**Controlled Terms URL**: None  
-
-**Field Name**: Keyword Term  
-**Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
-**Use**: Conditionally Required  
-**Use Condition**: Keyword Vocabulary  
-**Accepts Multiple Values**: Yes  
-**Format**: Array:Text  
-**Controlled Terms URL**: None  
-
-**Field Name**: Keyword Vocabulary  
-**Description**: Vocabulary for subject matter keywords listed in Keyword Term.  
-**Use**: Conditionally Required  
-**Use Condition**: Keyword Terms  
-**Accepts Multiple Values**: No  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_vocabulary_terms.csv  
-
-**Field Name**: Purpose  
-**Description**: Purpose for the creation of this resource and/or expected use.  
-**Use**: Optional  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Text  
-**Controlled Terms URL**: None  
-
-**Field Name**: Title  
-**Description**: A name given to the resource.  
-**Use**: Required  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Text  
-**Controlled Terms URL**: None  
-
-### Reuse
-**Field Name**: Provenance  
-**Description**: A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the resource.  
-**Use**: Recommended  
-**Use Condition**: None  
-**Accepts Multiple Values**: Yes  
-**Format**: Text  
-**Controlled Terms URL**: None  
-
-## Feature
-### Administrative
-**Field Name**: Date Last Updated  
-**Description**: Date the resource was last updated, or creation date if no updates have been made, YYYY-MM-DD or YYYY-MM or YYYY.  
-**Use**: Required  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Date: ISO 8601  
-**Controlled Terms URL**: None  
-
-### Coverage
-**Field Name**: Area (Square Meters)  
-**Description**: Numeric value for the area of the feature in square meters.  
-**Use**: Conditionally Required  
-**Use Condition**: Spatial Extent: None  
-**Accepts Multiple Values**: No  
-**Format**: Numeric  
-**Controlled Terms URL**: None  
-
-**Field Name**: Length (Meters)  
-**Description**: Numeric value for the length dimension of the feature in meters.  
-**Use**: Conditionally Recommended  
-**Use Condition**: Spatial Extent: None  
-**Accepts Multiple Values**: No  
-**Format**: Numeric  
-**Controlled Terms URL**: None  
-
-**Field Name**: Spatial Extent (Decimal Degrees)  
-**Description**: Coordinates for the bounding box describing the extent of the resource in decimal degrees.  
-**Use**: Recommended  
-**Use Condition**: None  
-**Accepts Multiple Values**: Yes  
-**Format**: Array: Decimal Degrees or Geometry: Polygon  
-**Controlled Terms URL**: None  
-
-**Field Name**: Width (Meters)  
-**Description**: Numeric value for the width dimension of the feature in meters.  
-**Use**: Conditionally Recommended  
-**Use Condition**: Spatial Extent: None  
-**Accepts Multiple Values**: No  
-**Format**: Numeric  
-**Controlled Terms URL**: None  
-
-### Reuse
-**Field Name**: Horizontal Accuracy Method  
-**Description**: Method for determining accuracy of the data.  
-**Use**: Required  
-**Use Condition**: None  
-**Accepts Multiple Values**: TBD  
-**Format**: Text  
-**Controlled Terms URL**: None  
-
-**Field Name**: Vertical Accuracy Method  
-**Description**: Method for determining accuracy of the data.  
-**Use**: Required  
-**Use Condition**: None  
-**Accepts Multiple Values**: TBD  
-**Format**: Text  
-**Controlled Terms URL**: None  
+**Controlled Terms URL**: None   
 
 ## Layer
 ### Access
@@ -783,3 +723,62 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://www.ngs.noaa.gov/datums/vertical/  
 
+## Feature
+### Administrative
+**Field Name**: Date Last Updated  
+**Description**: Date the resource was last updated, or creation date if no updates have been made, YYYY-MM-DD or YYYY-MM or YYYY.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Date: ISO 8601  
+**Controlled Terms URL**: None  
+
+### Coverage
+**Field Name**: Area (Square Meters)  
+**Description**: Numeric value for the area of the feature in square meters.  
+**Use**: Conditionally Required  
+**Use Condition**: Spatial Extent: None  
+**Accepts Multiple Values**: No  
+**Format**: Numeric  
+**Controlled Terms URL**: None  
+
+**Field Name**: Length (Meters)  
+**Description**: Numeric value for the length dimension of the feature in meters.  
+**Use**: Conditionally Recommended  
+**Use Condition**: Spatial Extent: None  
+**Accepts Multiple Values**: No  
+**Format**: Numeric  
+**Controlled Terms URL**: None  
+
+**Field Name**: Spatial Extent (Decimal Degrees)  
+**Description**: Coordinates for the bounding box describing the extent of the resource in decimal degrees.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Array: Decimal Degrees or Geometry: Polygon  
+**Controlled Terms URL**: None  
+
+**Field Name**: Width (Meters)  
+**Description**: Numeric value for the width dimension of the feature in meters.  
+**Use**: Conditionally Recommended  
+**Use Condition**: Spatial Extent: None  
+**Accepts Multiple Values**: No  
+**Format**: Numeric  
+**Controlled Terms URL**: None  
+
+### Reuse
+**Field Name**: Horizontal Accuracy Method  
+**Description**: Method for determining accuracy of the data.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: TBD  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Vertical Accuracy Method  
+**Description**: Method for determining accuracy of the data.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: TBD  
+**Format**: Text  
+**Controlled Terms URL**: None 
