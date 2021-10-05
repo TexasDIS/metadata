@@ -19,4 +19,4 @@ For a human-readable description of metadata fields, see: [tdis_metadata_field_d
 
 For CSV files containing metadata field definitions according to level/tier, see: [fields_by_level](https://github.com/TexasDIS/metadata/tree/main/fields_by_level)
 
-For CSV files containing controlled terms for particular fields, see: [controlled_terms](https://github.com/TexasDIS/metadata/tree/main/controlled_terms)
+For CSV files containing controlled terms for particular metadata fields, see: [controlled_terms](https://github.com/TexasDIS/metadata/tree/main/controlled_terms)
