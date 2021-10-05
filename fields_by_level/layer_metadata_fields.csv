@@ -13,30 +13,31 @@
 28,Public,Layer,Contact Information,Contact Role,The role or responsibility of the point of contact.,Conditionally Required,Contact Name,Yes,Controlled Terms,TBD
 30,Public,Layer,Coverage,Placename or Locality,Placename from GeoNames (http://www.geonames.org).,Recommended,None,Yes,Text or Controlled Terms,http://www.geonames.org
 32,Public,Layer,Coverage,Spatial Extent (Decimal Degrees),Coordinates for the bounding box describing the extent of the resource in decimal degrees.,Recommended,None,Yes,Array: Decimal Degrees or Geometry: Polygon,None
-31,Public,Layer,Coverage,Time Period Covered,"Time period to which the data refer as a single date/time, multiple dates/times, or a range of dates/times in ISO 8601. This reflects the time period covered by the data, not the dates of coding or making documents machine-readable or the dates the data were collected. Also known as span.",Recommended,None,No,Date: ISO 8601,None
+31,Public,Layer,Coverage,Time Period Covered,"Time period to which the data refer as a single date/time, multiple dates/times, or a range of dates/times in ISO 8601. This reflects the time period covered by the data, not the dates of coding or making documents machine-readable or the dates the data were collected. Also known as span.",Recommended,None,Yes,Date: ISO 8601,None
 42,Public,Layer,Discovery,Classification Term,TBD,TBD,None,Yes,Controlled Terms,TBD
 41,Public,Layer,Discovery,Classification Type,TBD,TBD,None,Yes,Controlled Terms,TBD
 49,Public,Layer,Discovery,Description ,"An account of the resource. Description may include but is not limited to: an abstract, a table of contents, or a free-text account of the resource.",Required,None,No,Text,None
-44,Public,Layer,Discovery,Digital Object Type,The type of content in the resource and optionally format. For files uploaded to TDIS/,Recommended,None,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv
 47,Public,Layer,Discovery,Keyword Term,Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.,Conditionally Required,Keyword Vocabulary,Yes,Array:Text,None
 46,Public,Layer,Discovery,Keyword Vocabulary,Vocabulary for subject matter keywords listed in Keyword Term.,Conditionally Required,Keyword Terms,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_vocabulary_terms.csv
 50,Public,Layer,Discovery,Purpose,Purpose for the creation of this resource and/or expected use.,Optional,None,No,Text,None
+44,Public,Layer,Discovery,The type of content in the resource and optionally format. For files uploaded to TDIS.,The type of content in the resource and optionally format. For files uploaded to TDIS/,Recommended,None,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv
 48,Public,Layer,Discovery,Title,A name given to the resource.,Required,None,No,Text,None
-64,Public,Layer,Reuse,Attribute Description,"Description of the attribute (field, variable) within the attribute table for this layer.",Optional,TBD,Yes,Text,None
-65,Public,Layer,Reuse,Attribute Domain Type,"Domain for values in the attribute (field, variable) within the attribute table.",Optional ,TBD,Yes,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/geo_attribute_value_type_terms.csv
-63,Public,Layer,Reuse,Attribute Name,"Name of the attribute (field, variable) within the attribute table for this layer.",Optional,TBD,Yes,Text,None
-66,Public,Layer,Reuse,Code Set URL,URL for the published code set.,Conditionally Required,Attribute Domain Type: Published Code Set,Yes,Text,None
+65,Public,Layer,Reuse,Attribute Description,"Description of the attribute (field, variable) within the attribute table for this layer.",Optional,TBD,Yes,Text,None
+66,Public,Layer,Reuse,Attribute Domain Type,"Domain for values in the attribute (field, variable) within the attribute table.",Optional ,TBD,Yes,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/geo_attribute_value_type_terms.csv
+64,Public,Layer,Reuse,Attribute Name,"Name of the attribute (field, variable) within the attribute table for this layer.",Optional,TBD,Yes,Text,None
+67,Public,Layer,Reuse,Code Set URL,URL for the published code set.,Conditionally Required,Attribute Domain Type: Published Code Set,Yes,Text,None
 55,Public,Layer,Reuse,Collection Method,"The procedure, technique, or mode of inquiry used to attain data.",Recommended,None,Yes,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv
-67,Public,Layer,Reuse,Domain Value,Valid value for the attribute.,Conditionally Required,Attribute Domain Type: Enumerated List,Yes,Text,None
-68,Public,Layer,Reuse,Domain Value Description,Description of the valid value for the attribute.,Conditionally Recommended,Attribute Domain Type: Enumerated List,Yes,Text,None
-61,Public,Layer,Reuse,Horizontal Accuracy (Meters),Numeric value for the accuracy in meters.,Required,None,TBD,Numeric,None
-70,Public,Layer,Reuse,Horizontal Accuracy Method,Method for determining accuracy of the data.,Required,None,TBD,Text,None
-59,Public,Layer,Reuse,Horizontal Coordinate System,TBD,Required,None,No,Controlled Terms,https://spatialreference.org/ref/
-57,Public,Layer,Reuse,Horizontal Datum,A horizontal datum is a specified coordinate system for a collection of positions on the surface of the earth. ,TBD,TBD,TBD,Controlled Terms,https://www.ngs.noaa.gov/datums/horizontal/
+56,Public,Layer,Reuse,Collection Method Description,Description of the data collection method.,Conditionally Required,Collection Method,No,Text,None
+68,Public,Layer,Reuse,Domain Value,Valid value for the attribute.,Conditionally Required,Attribute Domain Type: Enumerated List,Yes,Text,None
+69,Public,Layer,Reuse,Domain Value Description,Description of the valid value for the attribute.,Conditionally Recommended,Attribute Domain Type: Enumerated List,Yes,Text,None
+62,Public,Layer,Reuse,Horizontal Accuracy (Meters),Numeric value for the accuracy in meters.,Required,None,TBD,Numeric,None
+71,Public,Layer,Reuse,Horizontal Accuracy Method,Method for determining accuracy of the data.,Required,None,TBD,Text,None
+60,Public,Layer,Reuse,Horizontal Coordinate System,TBD,Required,None,No,Controlled Terms,https://spatialreference.org/ref/
+58,Public,Layer,Reuse,Horizontal Datum,A horizontal datum is a specified coordinate system for a collection of positions on the surface of the earth. ,TBD,TBD,TBD,Controlled Terms,https://www.ngs.noaa.gov/datums/horizontal/
 52,Public,Layer,Reuse,Processing Step Date,"The date when a particular processing step was completed, YYYY-MM-DD or YYYY-MM or YYYY. ",Optional,None,Yes,Date: ISO 8601,None
 54,Public,Layer,Reuse,Processing Step Description,"Description of the processing step performed on a date. A processing step represents a structural change to the data (such as adding fields) and not the addition of data. There can be several processing steps, each of which may have a different date.",Conditionally Required,Processing Step Date,Yes,Text,None
-69,Public,Layer,Reuse,Value Range,"Range of valid values separated by a dash (""-"").",Conditionally Required,Attribute Domain Type: Range,Yes,Text,None
-62,Public,Layer,Reuse,Vertical Accuracy (Meters),Numeric value for the accuracy in meters.,Required,None,TBD,Numeric,None
-71,Public,Layer,Reuse,Vertical Accuracy Method,Method for determining accuracy of the data.,Required,None,TBD,Text,None
-60,Public,Layer,Reuse,Vertical Coordinate System,TBD,Required,None,No,Controlled Terms,https://spatialreference.org/ref/
-58,Public,Layer,Reuse,Vertical Datum,A vertical datum is a surface of zero elevation to which heights of various points are referenced. ,TBD,TBD,TBD,Controlled Terms,https://www.ngs.noaa.gov/datums/vertical/
+70,Public,Layer,Reuse,Value Range,"Range of valid values separated by a dash (""-"").",Conditionally Required,Attribute Domain Type: Range,Yes,Text,None
+63,Public,Layer,Reuse,Vertical Accuracy (Meters),Numeric value for the accuracy in meters.,Required,None,TBD,Numeric,None
+72,Public,Layer,Reuse,Vertical Accuracy Method,Method for determining accuracy of the data.,Required,None,TBD,Text,None
+61,Public,Layer,Reuse,Vertical Coordinate System,TBD,Required,None,No,Controlled Terms,https://spatialreference.org/ref/
+59,Public,Layer,Reuse,Vertical Datum,A vertical datum is a surface of zero elevation to which heights of various points are referenced. ,TBD,TBD,TBD,Controlled Terms,https://www.ngs.noaa.gov/datums/vertical/

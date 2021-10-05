@@ -12,4 +12,4 @@
 46,Public,Dataset,Discovery,Keyword Vocabulary,Vocabulary for subject matter keywords listed in Keyword Term.,Conditionally Required,Keyword Terms,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_vocabulary_terms.csv
 50,Public,Dataset,Discovery,Purpose,Purpose for the creation of this resource and/or expected use.,Optional,None,No,Text,None
 48,Public,Dataset,Discovery,Title,A name given to the resource.,Required,None,No,Text,None
-56,Public,Dataset,Reuse,Provenance,"A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the resource.",Recommended,None,Yes,Text,None
+57,Public,Dataset,Reuse,Provenance,"A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the resource.",Recommended,None,Yes,Text,None

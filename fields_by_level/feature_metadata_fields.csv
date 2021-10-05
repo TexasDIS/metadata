@@ -4,5 +4,5 @@
 33,Public,Feature,Coverage,Length (Meters),Numeric value for the length dimension of the feature in meters.,Conditionally Recommended,Spatial Extent: None,No,Numeric,None
 32,Public,Feature,Coverage,Spatial Extent (Decimal Degrees),Coordinates for the bounding box describing the extent of the resource in decimal degrees.,Recommended,None,Yes,Array: Decimal Degrees or Geometry: Polygon,None
 34,Public,Feature,Coverage,Width (Meters),Numeric value for the width dimension of the feature in meters.,Conditionally Recommended,Spatial Extent: None,No,Numeric,None
-70,Public,Feature,Reuse,Horizontal Accuracy Method,Method for determining accuracy of the data.,Required,None,TBD,Text,None
-71,Public,Feature,Reuse,Vertical Accuracy Method,Method for determining accuracy of the data.,Required,None,TBD,Text,None
+71,Public,Feature,Reuse,Horizontal Accuracy Method,Method for determining accuracy of the data.,Required,None,TBD,Text,None
+72,Public,Feature,Reuse,Vertical Accuracy Method,Method for determining accuracy of the data.,Required,None,TBD,Text,None
