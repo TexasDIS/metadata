@@ -1,6 +1,6 @@
 # TDIS Metadata
 This repository contains public documentation of the TDIS metadata schema under ongoing development. 
-Please note that field definitions will become more rigorous over time, and TDIS controlled vocabularies are expected to expand as lists or hierarchies of valid terms.
+**Please note**: field definitions will become more rigorous over time, and TDIS controlled terms are expected to expand as lists or hierarchies of valid terms.
 
 ## Metadata Organization
 Within the current TDIS model, "datasets" contain "artifacts" and "data layers." Data layers can also contain "features". Datasets, artifacts, data layers, and features, each have descriptive metadata records associated with them.
@@ -18,3 +18,5 @@ Features, as a part of a data layer, are a record-by-record description of each 
 For a human-readable description of metadata fields, see: [tdis_metadata_field_documentation.md](https://github.com/TexasDIS/metadata/blob/main/tdis_metadata_field_documentation.md)
 
 For CSV files containing metadata field definitions according to level/tier, see: [fields_by_level](https://github.com/TexasDIS/metadata/tree/main/fields_by_level)
+
+For CSV files containing controlled terms for particular metadata fields, see: [controlled_terms](https://github.com/TexasDIS/metadata/tree/main/controlled_terms)
