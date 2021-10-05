@@ -1,19 +1,32 @@
-term
-Administrative Record
-Physical Measurement
-Imagery
-Observation
-Experiment
-Survey
-Focus Group
-Interview
-Personal Narrative
-Model or Simulation
-Geocoding
-Content Coding
-Transcription
-Digitization
-Compilation/Synthesis
-Crowdsourcing
-Unknown
-Other
+term,child_term,description,metadata_level
+Administrative Record,,"Example: Insurance claims, City boundaries.",Layer;Artifact
+Physical Measurement,,Example: Sensor reading.,Artifact
+Imagery,,TBD,Layer;Artifact
+Observation,,TBD,Layer;Artifact
+Experiment,,TBD,Layer;Artifact
+Survey,,Example: Questionnaire.,Layer;Artifact
+Focus Group,,TBD,Layer;Artifact
+Interview,,TBD,Layer;Artifact
+Personal Narrative,,Example: Diary entry.,Layer;Artifact
+Model or Simulation Output,,TBD,Layer;Artifact
+Geocoding,,TBD,Layer
+Geocoding,Address Offset,Geocoded from address with offset.,Layer
+Geocoding,Address Centerline,Geocoded from address with no offset. Point on street centerline.,Layer
+Geocoding,Intersection,Geocoded from a street intersection.,Layer
+Geocoding,Other,Geocoded using another method.,Layer
+Content Coding,,TBD,Artifact
+Transcription,,TBD,Layer;Artifact
+Digitization,,TBD,Layer;Artifact
+Digitization,Aerial Imagery,Heads-up digitized from aerial imagery.,Layer
+Digitization,Topo Map,"Heads-up digitized from Digital 7,5’ USGS Topo.",Layer
+Digitization,Paper Map,Digitized from paper map.,Layer
+Digitization,Survey,Digitized from surveyor’s legal descriptions. Example: Metes & Bounds.,Layer
+Digitization,DEM,Digitized from Digital Elevation Model.,Layer
+Digitization,LiDAR,Digitized from LiDAR elevation data.,Layer
+Compilation/Synthesis,,TBD,Layer;Artifact
+Ground Survey,,TBD,Layer
+Crowdsourcing,,Data received through crowdsourcing.,Layer;Artifact
+GPS Measurement,Real,GPS measurement using real-time correction.,Layer
+GPS Measurement,Post,GPS measurement using post-processed correction.,Layer
+Unknown,,Method unknown.,Layer;Artifact
+Other,,Other collection method.,Layer;Artifact
