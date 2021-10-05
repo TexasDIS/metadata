@@ -1,5 +1,5 @@
 # TDIS Metadata Documentation
-*Last revised: 2021-10-04*
+*Last revised: 2021-10-05*
 
 ## Metadata Organization
 Within the current TDIS model, "datasets" contain "artifacts" and "data layers." Data layers can also contain "features". Datasets, artifacts, data layers, and features, each have descriptive metadata records associated with them.
@@ -10,7 +10,7 @@ Artifacts represent digital objects, such as model software, content within docu
 
 Data layers have intrinsic spatial characteristics and include (but are not limited to) streets, city boundaries, river gages, and imagery with geospatial information contained within files or made available via service endpoints. 
 
-Features, as a part of a data layer, are a record-by-record description of each independent “row” in an geospatial attribute table or database. 
+Features, as a part of a data layer, are a record-by-record description of each independent “row” in a geospatial attribute table or database. 
 
 ### Field Definition Glossary 
 Each metadata field below is defined with the following elements:
