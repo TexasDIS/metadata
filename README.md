@@ -11,7 +11,7 @@ Artifacts represent digital objects, such as model software, content within docu
 
 Data layers have intrinsic spatial characteristics and include (but are not limited to) streets, city boundaries, river gages, and imagery with geospatial information contained within files or made available via service endpoints. 
 
-Features, as a part of a data layer, are a record-by-record description of each independent “row” in an geospatial attribute table or database. 
+Features, as a part of a data layer, are a record-by-record description of each independent “row” in a geospatial attribute table or database. 
 
 ## Documentation in this Repository
 
