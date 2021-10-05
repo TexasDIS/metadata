@@ -17,4 +17,4 @@ Features, as a part of a data layer, are a record-by-record description of each 
 
 For a human-readable description of metadata fields, see [tdis_metadata_field_documentation.md](https://github.com/TexasDIS/metadata/blob/main/tdis_metadata_field_documentation.md)
 
-For CSV files containing metadata field definitions according to level/tier, see: [https://github.com/TexasDIS/metadata/tree/main/fields_by_level]
+For CSV files containing metadata field definitions according to level/tier, see: [fields_by_level](https://github.com/TexasDIS/metadata/tree/main/fields_by_level)
