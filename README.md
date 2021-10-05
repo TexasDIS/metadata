@@ -1,6 +1,6 @@
 # TDIS Metadata
 This repository contains public documentation of the TDIS metadata schema under ongoing development. 
-Please note that field definitions will become more rigorous over time, and TDIS controlled vocabularies are expected to expand as lists or hierarchies of valid terms.
+**Please note**: field definitions will become more rigorous over time, and TDIS controlled terms are expected to expand as lists or hierarchies of valid terms.
 
 ## Metadata Organization
 Within the current TDIS model, "datasets" contain "artifacts" and "data layers." Data layers can also contain "features". Datasets, artifacts, data layers, and features, each have descriptive metadata records associated with them.
