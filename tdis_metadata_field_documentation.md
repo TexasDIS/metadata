@@ -1,5 +1,5 @@
 # TDIS Metadata Documentation
-*Last revised: 2021-10-05*
+*Last revised: 2021-10-06*
 
 ## Metadata Organization
 Within the current TDIS model, "datasets" contain "artifacts" and "data layers." Data layers can also contain "features". Datasets, artifacts, data layers, and features, each have descriptive metadata records associated with them.
@@ -21,7 +21,7 @@ Each metadata field below is defined with the following elements:
 - **Condition**: The condition dictating when a "Conditionally Required" metadata field becomes "Required", or a "Conditionally Recommended" metadata field becomes "Recommended". "None" indicates that there are no conditions.
 - **Accepts Multiple Values**: "Yes" or "No" indicating that multiple values can be added to the metadata field.
 - **Format**: Indication of the type of value the field takes, this will be used for validation.
-- **Controlled Terms URL**: A link to published terms that are valid.
+- **Controlled Terms URL**: A link to published terms that are valid. 
 
 ## Dataset
 ### Administrative
@@ -58,6 +58,14 @@ Each metadata field below is defined with the following elements:
 **Format**: Text or Controlled Terms  
 **Controlled Terms URL**: TBD  
 
+**Field Name**: Contact Cell Phone  
+**Description**: Cell phone number for the responsible point of contact.  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Name  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
 **Field Name**: Contact Email  
 **Description**: Email for the responsible point of contact.  
 **Use**: Conditionally Required  
@@ -81,6 +89,14 @@ Each metadata field below is defined with the following elements:
 **Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
 **Controlled Terms URL**: TBD  
+
+**Field Name**: Contact Work Phone  
+**Description**: Work phone number for the responsible point of contact.  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Name  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
 
 ### Coverage
 **Field Name**: Spatial Extent (Decimal Degrees)  
@@ -176,6 +192,14 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Administrative
+**Field Name**: Dataset Identifier  
+**Description**: The TDIS unique identifier for the Dataset the resource is a part of  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: TDIS Identifier  
+**Controlled Terms URL**: None  
+
 **Field Name**: Date Last Updated  
 **Description**: Date the resource was last updated, or creation date if no updates have been made, YYYY-MM-DD or YYYY-MM or YYYY.  
 **Use**: Required  
@@ -394,8 +418,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: Processing Step Date  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
-**Controlled Terms URL**: None  
- 
+**Controlled Terms URL**: None 
 
 ## Layer
 ### Access
@@ -432,6 +455,14 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Administrative
+**Field Name**: Dataset Identifier  
+**Description**: The TDIS unique identifier for the Dataset the resource is a part of  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: TDIS Identifier  
+**Controlled Terms URL**: None  
+
 **Field Name**: Date Last Updated  
 **Description**: Date the resource was last updated, or creation date if no updates have been made, YYYY-MM-DD or YYYY-MM or YYYY.  
 **Use**: Required  
@@ -473,6 +504,14 @@ Each metadata field below is defined with the following elements:
 **Format**: Text or Controlled Terms  
 **Controlled Terms URL**: TBD  
 
+**Field Name**: Contact Cell Phone  
+**Description**: Cell phone number for the responsible point of contact.  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Name  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
 **Field Name**: Contact Email  
 **Description**: Email for the responsible point of contact.  
 **Use**: Conditionally Required  
@@ -496,6 +535,14 @@ Each metadata field below is defined with the following elements:
 **Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
 **Controlled Terms URL**: TBD  
+
+**Field Name**: Contact Work Phone  
+**Description**: Work phone number for the responsible point of contact.  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Name  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
 
 ### Coverage
 **Field Name**: Placename or Locality  
@@ -798,4 +845,4 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: TBD  
 **Format**: Text  
-**Controlled Terms URL**: None 
+**Controlled Terms URL**: None  
