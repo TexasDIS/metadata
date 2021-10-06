@@ -3,14 +3,17 @@
 0,Public,Layer,Access,Distributor or Publisher,"The organization sharing, publishing, or otherwise responsible for providing access to the resource.",Conditionally Required,Distribution URL,No,Text or Controlled Terms,TBD
 2,Public,Layer,Access,Service Endpoint Type,The type of service endpoint used for distribution.,Conditionally Required,Service Endpoint URL,No,Controlled Terms,TBD
 3,Public,Layer,Access,Service Endpoint URL,"URL of the service endpoint, API, etc.",Conditionally Required,Service Endpoint Type,No,URL,None
+75,Public,Layer,Administrative,Dataset Identifier,The TDIS unique identifier for the Dataset the resource is a part of,Required,None,No,TDIS Identifier,None
 6,Public,Layer,Administrative,Date Last Updated,"Date the resource was last updated, or creation date if no updates have been made, YYYY-MM-DD or YYYY-MM or YYYY.",Required,None,No,Date: ISO 8601,None
 15,Public,Layer,Administrative,Metadata Date,Date the metadata record was last updated.,Required,None,No,Date: ISO 8601,None
 9,Public,Layer,Administrative,Update Frequency,"If the data are regularly updated, how often.",Recommended,None,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/update_frequency_terms.csv
 16,Public,Layer,Administrative,Use Constraint,Constraints or restrictions on use of the resource.,Required,None,Yes,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/use_constraint_terms.csv
 27,Public,Layer,Contact Information,Contact Affiliation,Organizational affiliation for the responsible point of contact.,Recommended,None,Yes,Text or Controlled Terms,TBD
+20,Public,Layer,Contact Information,Contact Cell Phone,Cell phone number for the responsible point of contact.,Conditionally Required,Contact Name,Yes,Text,None
 26,Public,Layer,Contact Information,Contact Email,Email for the responsible point of contact.,Conditionally Required,Contact Name,Yes,Text,None
 25,Public,Layer,Contact Information,Contact Name,Name of the responsible point of contact.,"Required for Dataset, Optional at lower levels",None,Yes,Text,None
 28,Public,Layer,Contact Information,Contact Role,The role or responsibility of the point of contact.,Conditionally Required,Contact Name,Yes,Controlled Terms,TBD
+19,Public,Layer,Contact Information,Contact Work Phone,Work phone number for the responsible point of contact.,Conditionally Required,Contact Name,Yes,Text,None
 30,Public,Layer,Coverage,Placename or Locality,Placename from GeoNames (http://www.geonames.org).,Recommended,None,Yes,Text or Controlled Terms,http://www.geonames.org
 32,Public,Layer,Coverage,Spatial Extent (Decimal Degrees),Coordinates for the bounding box describing the extent of the resource in decimal degrees.,Recommended,None,Yes,Array: Decimal Degrees or Geometry: Polygon,None
 31,Public,Layer,Coverage,Time Period Covered,"Time period to which the data refer as a single date/time, multiple dates/times, or a range of dates/times in ISO 8601. This reflects the time period covered by the data, not the dates of coding or making documents machine-readable or the dates the data were collected. Also known as span.",Recommended,None,Yes,Date: ISO 8601,None
