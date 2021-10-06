@@ -21,10 +21,10 @@
 42,Public,Artifact,Discovery,Classification Term,TBD,TBD,None,Yes,Controlled Terms,TBD
 41,Public,Artifact,Discovery,Classification Type,TBD,TBD,None,Yes,Controlled Terms,TBD
 49,Public,Artifact,Discovery,Description ,"An account of the resource. Description may include but is not limited to: an abstract, a table of contents, or a free-text account of the resource.",Required,None,No,Text,None
+44,Public,Artifact,Discovery,Digital Object Type,The type of content in the resource and optionally format. For files uploaded to TDIS.,Recommended,None,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv
 47,Public,Artifact,Discovery,Keyword Term,Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.,Conditionally Required,Keyword Vocabulary,Yes,Array:Text,None
 46,Public,Artifact,Discovery,Keyword Vocabulary,Vocabulary for subject matter keywords listed in Keyword Term.,Conditionally Required,Keyword Terms,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_vocabulary_terms.csv
 50,Public,Artifact,Discovery,Purpose,Purpose for the creation of this resource and/or expected use.,Optional,None,No,Text,None
-44,Public,Artifact,Discovery,The type of content in the resource and optionally format. For files uploaded to TDIS.,The type of content in the resource and optionally format. For files uploaded to TDIS/,Recommended,None,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv
 48,Public,Artifact,Discovery,Title,A name given to the resource.,Required,None,No,Text,None
 55,Public,Artifact,Reuse,Collection Method,"The procedure, technique, or mode of inquiry used to attain data.",Recommended,None,Yes,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv
 56,Public,Artifact,Reuse,Collection Method Description,Description of the data collection method.,Conditionally Required,Collection Method,No,Text,None

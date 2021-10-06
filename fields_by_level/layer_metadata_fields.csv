@@ -17,10 +17,10 @@
 42,Public,Layer,Discovery,Classification Term,TBD,TBD,None,Yes,Controlled Terms,TBD
 41,Public,Layer,Discovery,Classification Type,TBD,TBD,None,Yes,Controlled Terms,TBD
 49,Public,Layer,Discovery,Description ,"An account of the resource. Description may include but is not limited to: an abstract, a table of contents, or a free-text account of the resource.",Required,None,No,Text,None
+44,Public,Layer,Discovery,Digital Object Type,The type of content in the resource and optionally format. For files uploaded to TDIS.,Recommended,None,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv
 47,Public,Layer,Discovery,Keyword Term,Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.,Conditionally Required,Keyword Vocabulary,Yes,Array:Text,None
 46,Public,Layer,Discovery,Keyword Vocabulary,Vocabulary for subject matter keywords listed in Keyword Term.,Conditionally Required,Keyword Terms,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_vocabulary_terms.csv
 50,Public,Layer,Discovery,Purpose,Purpose for the creation of this resource and/or expected use.,Optional,None,No,Text,None
-44,Public,Layer,Discovery,The type of content in the resource and optionally format. For files uploaded to TDIS.,The type of content in the resource and optionally format. For files uploaded to TDIS/,Recommended,None,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv
 48,Public,Layer,Discovery,Title,A name given to the resource.,Required,None,No,Text,None
 65,Public,Layer,Reuse,Attribute Description,"Description of the attribute (field, variable) within the attribute table for this layer.",Optional,TBD,Yes,Text,None
 66,Public,Layer,Reuse,Attribute Domain Type,"Domain for values in the attribute (field, variable) within the attribute table.",Optional ,TBD,Yes,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/geo_attribute_value_type_terms.csv
