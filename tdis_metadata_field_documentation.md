@@ -18,7 +18,7 @@ Each metadata field below is defined with the following elements:
 - **Field Name**: A display name for the metadata field.
 - **Description**: Text describing the information that the metadata field should contain as a value. 
 - **Use**: An indication of whether the metadata field is "Required", "Recommended", "Optional", "Conditionally Required", or "Conditionally Recommended" within the level (e.g. Dataset, Artifact, Data Layer, Feature).
-- **Condition**: The condition dictating when a "Conditionally Required" metadata field becomes "Required", or a "Conditionally Recommended" metadata field becomes "Recommended". "None" indicates that there are no conditions.
+- **Use Condition**: The condition dictating when a "Conditionally Required" metadata field becomes "Required", or a "Conditionally Recommended" metadata field becomes "Recommended". "None" indicates that there are no conditions.
 - **Accepts Multiple Values**: "Yes" or "No" indicating that multiple values can be added to the metadata field.
 - **Format**: Indication of the type of value the field takes, this will be used for validation.
 - **Controlled Terms URL**: A link to published terms that are valid. 
