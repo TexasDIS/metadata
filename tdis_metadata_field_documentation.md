@@ -323,6 +323,14 @@ Each metadata field below is defined with the following elements:
 **Format**: Text  
 **Controlled Terms URL**: None  
 
+**Field Name**: Digital Object Type  
+**Description**: The type of content in the resource and optionally format. For files uploaded to TDIS.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv  
+
 **Field Name**: Keyword Term  
 **Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
 **Use**: Conditionally Required  
@@ -346,14 +354,6 @@ Each metadata field below is defined with the following elements:
 **Accepts Multiple Values**: No  
 **Format**: Text  
 **Controlled Terms URL**: None  
-
-**Field Name**: The type of content in the resource and optionally format. For files uploaded to TDIS.  
-**Description**: The type of content in the resource and optionally format. For files uploaded to TDIS/  
-**Use**: Recommended  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv  
 
 **Field Name**: Title  
 **Description**: A name given to the resource.  
@@ -395,6 +395,7 @@ Each metadata field below is defined with the following elements:
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
 **Controlled Terms URL**: None  
+ 
 
 ## Layer
 ### Access
@@ -546,6 +547,14 @@ Each metadata field below is defined with the following elements:
 **Format**: Text  
 **Controlled Terms URL**: None  
 
+**Field Name**: Digital Object Type  
+**Description**: The type of content in the resource and optionally format. For files uploaded to TDIS.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv  
+
 **Field Name**: Keyword Term  
 **Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
 **Use**: Conditionally Required  
@@ -569,14 +578,6 @@ Each metadata field below is defined with the following elements:
 **Accepts Multiple Values**: No  
 **Format**: Text  
 **Controlled Terms URL**: None  
-
-**Field Name**: The type of content in the resource and optionally format. For files uploaded to TDIS.  
-**Description**: The type of content in the resource and optionally format. For files uploaded to TDIS/  
-**Use**: Recommended  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv  
 
 **Field Name**: Title  
 **Description**: A name given to the resource.  
@@ -797,4 +798,4 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: TBD  
 **Format**: Text  
-**Controlled Terms URL**: None  
+**Controlled Terms URL**: None 
