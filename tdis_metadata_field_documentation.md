@@ -18,10 +18,10 @@ Each metadata field below is defined with the following elements:
 - **Field Name**: A display name for the metadata field.
 - **Description**: Text describing the information that the metadata field should contain as a value. 
 - **Use**: An indication of whether the metadata field is "Required", "Recommended", "Optional", "Conditionally Required", or "Conditionally Recommended" within the level (e.g. Dataset, Artifact, Data Layer, Feature).
-- **Condition**: The condition dictating when a "Conditionally Required" metadata field becomes "Required", or a "Conditionally Recommended" metadata field becomes "Recommended". "None" indicates that there are no conditions.
+- **Use Condition**: The condition dictating when a "Conditionally Required" metadata field becomes "Required", or a "Conditionally Recommended" metadata field becomes "Recommended". "None" indicates that there are no conditions.
 - **Accepts Multiple Values**: "Yes" or "No" indicating that multiple values can be added to the metadata field.
 - **Format**: Indication of the type of value the field takes, this will be used for validation.
-- **Controlled Terms URL**: A link to published terms that are valid. 
+- **Controlled Terms URL**: A link to published terms that are valid.
 
 ## Dataset
 ### Administrative
@@ -193,7 +193,7 @@ Each metadata field below is defined with the following elements:
 
 ### Administrative
 **Field Name**: Dataset Identifier  
-**Description**: The TDIS unique identifier for the Dataset the resource is a part of  
+**Description**: The TDIS unique identifier for the Dataset the resource is a part of.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -418,7 +418,15 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: Processing Step Date  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
-**Controlled Terms URL**: None 
+**Controlled Terms URL**: None  
+
+**Field Name**: Provenance  
+**Description**: A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the resource.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
 
 ## Layer
 ### Access
@@ -456,7 +464,7 @@ Each metadata field below is defined with the following elements:
 
 ### Administrative
 **Field Name**: Dataset Identifier  
-**Description**: The TDIS unique identifier for the Dataset the resource is a part of  
+**Description**: The TDIS unique identifier for the Dataset the resource is a part of.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -743,6 +751,14 @@ Each metadata field below is defined with the following elements:
 **Description**: Description of the processing step performed on a date. A processing step represents a structural change to the data (such as adding fields) and not the addition of data. There can be several processing steps, each of which may have a different date.  
 **Use**: Conditionally Required  
 **Use Condition**: Processing Step Date  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Provenance  
+**Description**: A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the resource.  
+**Use**: Recommended  
+**Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
 **Controlled Terms URL**: None  
