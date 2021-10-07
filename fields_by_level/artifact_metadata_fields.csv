@@ -3,7 +3,7 @@
 0,Public,Artifact,Access,Distributor or Publisher,"The organization sharing, publishing, or otherwise responsible for providing access to the resource.",Conditionally Required,Distribution URL,No,Text or Controlled Terms,TBD
 2,Public,Artifact,Access,Service Endpoint Type,The type of service endpoint used for distribution.,Conditionally Required,Service Endpoint URL,No,Controlled Terms,TBD
 3,Public,Artifact,Access,Service Endpoint URL,"URL of the service endpoint, API, etc.",Conditionally Required,Service Endpoint Type,No,URL,None
-75,Public,Artifact,Administrative,Dataset Identifier,The TDIS unique identifier for the Dataset the resource is a part of,Required,None,No,TDIS Identifier,None
+75,Public,Artifact,Administrative,Dataset Identifier,The TDIS unique identifier for the Dataset the resource is a part of.,Required,None,No,TDIS Identifier,None
 6,Public,Artifact,Administrative,Date Last Updated,"Date the resource was last updated, or creation date if no updates have been made, YYYY-MM-DD or YYYY-MM or YYYY.",Required,None,No,Date: ISO 8601,None
 14,Public,Artifact,Administrative,License,License associated with the resource.,Optional,None,No,Text,None
 15,Public,Artifact,Administrative,Metadata Date,Date the metadata record was last updated.,Required,None,No,Date: ISO 8601,None
@@ -31,3 +31,4 @@
 56,Public,Artifact,Reuse,Collection Method Description,Description of the data collection method.,Conditionally Required,Collection Method,No,Text,None
 52,Public,Artifact,Reuse,Processing Step Date,"The date when a particular processing step was completed, YYYY-MM-DD or YYYY-MM or YYYY. ",Optional,None,Yes,Date: ISO 8601,None
 54,Public,Artifact,Reuse,Processing Step Description,"Description of the processing step performed on a date. A processing step represents a structural change to the data (such as adding fields) and not the addition of data. There can be several processing steps, each of which may have a different date.",Conditionally Required,Processing Step Date,Yes,Text,None
+57,Public,Artifact,Reuse,Provenance,"A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the resource.",Recommended,None,Yes,Text,None
