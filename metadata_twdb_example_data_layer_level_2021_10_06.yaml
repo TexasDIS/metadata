@@ -1,0 +1,64 @@
+global_attributes:
+  data_layer_title: Industry Outfalls
+  collection_attached: Region 01 Models & Gdb
+  description: 5 year Flood Plan Input Layer for Region 1 Model
+  purpose: Input data layer to help run Model for Region 1
+  keywords_dictionary: AGROVOC
+  keywords: Model Input, Flood Risk, Outfalls
+  classification_type:
+  classification_term:
+  digital_object_type: spatial layer 
+  spatial_extent: [ "28.873539463162686,-98.6572265625", "31.71882222408327,-98.6572265625", "31.71882222408327,-94.11987304687501", "28.873539463162686,-94.11987304687501", "28.873539463162686,-98.6572265625" ]
+  locality: Texas Panhandle
+  time_period_covered: 2018-10-01 thru 2020-09-30; 2021-01-01 thru 2021-10-01 
+  distributor: TWDB
+  distribution_method: download on demand
+  service_endpoint_type: RESTful
+  service_url: url_goes_here if web service
+  contact_name: Brent Doe
+  contact_wk_phone: 512-555-1212
+  contact_cell_phone:
+  contact_email: bdoe@emailexample.com
+  contact_affiliation: UT Austin
+  contact_role: accept incoming requests and route them to appropriate contacts  
+  collection_method: Model or Simulation Output 
+  provenance: TBD
+  process_step: 1
+  process_description: Paper maps acquired from TxDOT.
+  process_date: 20090501
+  process_step: 2
+  process_description: Initial file geodatabase created using ArcGIS ArcMap.
+  process_date: 20090507
+  process_step: 3
+  process_description: Data layer projected to Texas Centric Albers Equal Area.
+  process_date: 20090507
+  process_step: 4
+  process_description: Attribute table created, new fields in table added to table. Field names and formats defined.
+  process_date: 20090507
+  collection_method: Model or Simulation Output
+  collection_method_description: Water Model
+  horizontal_datum: North American Datum of 1983
+  vertical_datum: NAV88
+  horizontal_coord_system:
+  vertical_coord_system:
+  horizontal_acc: 10 Meters
+  horizontal_acc_method: GPS
+  vertical_acc: 1 Meter
+  vertical_acc_method:
+  attribute_name: GIS_NUMBER
+  attribute_description: This alphanumeric field uniquly identifies each watewater outfall location. The number is a concatenation of the permit number
+  attribute_domain_type: WQP-LOCdatadictionary
+  attribute_name: STATUS
+  attribute_description: This alphanumeric field contains a code which indicates the status 
+  attribute_domain_type:
+  attribute_name: COUNTY
+  attribute_description: This fifteen-character alphanumeric field contains the name of the county
+  attribute_domain_type:
+  attribute_name: LAT_DD
+  attribute_description: Latitude in Decimal Degrees
+  attribute_domain_type:
+  constraints_on_use: Public
+  update_frequency: 2 or More Years
+  metadata_date: 2021-09-24 
+  date_last_updated: 2021-09-01
+
