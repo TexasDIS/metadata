@@ -1,0 +1,8 @@
+term,description,metadata_level
+Metadata Creator,Contact responsible for creating the metadata record.,TBD
+Submitter,Contact responsible for uploading or transferring the digital object to TDIS.,TBD
+Curator,Contact responsible for the quality and formatting of the digital object and its metadata to enable reuse.,TBD
+Maintainer,"Contact responsible for updating and maintaining versions of the digital object, often used for software. ",TBD
+Steward,Contact with responsibility for ensuring appropriate long-term stewardship of the digital object in terms of storage and management.,TBD
+Rights Holder,"Contact controlling copyrights or other intellectual property rights over the digital object, responsible for determining licenses.",TBD
+Other,Contact with another role or responsibility toward the digital object.,TBD
