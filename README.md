@@ -3,7 +3,8 @@ This repository contains public documentation of the TDIS metadata schema under 
 **Please note**: field definitions will become more rigorous over time, and TDIS controlled terms are expected to expand as lists or hierarchies of valid terms.
 
 ## Metadata Organization
-Within the current TDIS model, "datasets" contain "artifacts", "data layers", and "models." Data layers can also contain "features", and models can have an associated "configuration". Datasets, artifacts, data layers, features, models, and configurations each have descriptive metadata associated with them.
+Within the current TDIS model, "datasets" contain "artifacts", "data layers", and "models." Data layers can also contain "features", and models can have an associated "configuration". Datasets, artifacts, data layers, features, models, and configurations each have descriptive metadata associated with them.  
+
 ![TDIS Model Diagram](https://github.com/TexasDIS/metadata/blob/main/visuals/tdis-model-diagram.png)
 
 Datasets group one or more layers, artifacts and/or models together. For example, a complex geospatial database object would be represented as a dataset containing multiple data layers.
