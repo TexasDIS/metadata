@@ -1,4 +1,4 @@
-term,file_type,metadata_level
+term,format,metadata_level
 Vector,SHP,Layer
 Vector,,Layer
 LIDAR,LAS,Layer
@@ -14,6 +14,12 @@ Document,DOCX,Artifact
 Image,PNG,Artifact
 Image,JPG,Artifact
 Image,,Artifact
+Video,MOV,
+Video,MP4,Artifact
+Video,,Artifact
+Audio,,
+Audio,,
+Audio,,
 Plain Text,TXT,Artifact
 Formatted Text,MD,Artifact
 Formatted Text,GeoJSON,Layer
@@ -21,13 +27,12 @@ Formatted Text,JSON,Artifact
 Formatted Text,XML,Artifact
 Formatted Text,YML,Artifact
 Formatted Text,,Artifact
-Model,,Artifact
+Model,,Model
 Code,Python,Artifact
 Code,R,Artifact
 Code,JavaScript,Artifact
 Code,,Artifact
-Binary,NetCDF,Layer;Artifact
-Binary,,Layer;Artifact
-Database ,GDB,Layer
-Database ,,Layer;Artifact
+NetCDF,,Layer;Artifact
+Database ,GDB,Dataset
+Database ,,Dataset
 Other,,Layer;Artifact
