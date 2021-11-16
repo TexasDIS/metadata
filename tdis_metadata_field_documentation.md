@@ -1,16 +1,20 @@
 # TDIS Metadata Documentation
-*Last revised: 2021-10-06*
+*Last revised: 2021-11-16*
 
 ## Metadata Organization
-Within the current TDIS model, "datasets" contain "artifacts" and "data layers." Data layers can also contain "features". Datasets, artifacts, data layers, and features, each have descriptive metadata records associated with them.
+Within the current TDIS model, "datasets" contain "artifacts", "data layers", and "models." Data layers can also contain "features", and models can have an associated "configuration". Datasets, artifacts, data layers, features, models, and configurations each have descriptive metadata associated with them.  
 
 ![TDIS Model Diagram](https://github.com/TexasDIS/metadata/blob/main/visuals/tdis-model-diagram.png)
 
-Artifacts represent digital objects, such as model software, content within documents, data within spreadsheets, or other data made available via service endpoints. Artifacts do not contain geometry information (points, lines, or polygons) or images with spatial information. 
+Datasets group one or more layers, artifacts and/or models together. For example, a complex geospatial database object would be represented as a dataset containing multiple data layers.
 
-Data layers have intrinsic spatial characteristics and include (but are not limited to) streets, city boundaries, river gages, and imagery with geospatial information contained within files or made available via service endpoints. 
+Artifacts represent digital objects such as content within documents, data within spreadsheets, or other data made available via service endpoints. Artifacts do not contain geometry information (points, lines, or polygons) or images with spatial information. 
+
+Data layers represent digital objects with intrinsic spatial characteristics and include (but are not limited to) streets, city boundaries, river gages, and imagery with geospatial information contained within files or made available via service endpoints. 
 
 Features, as a part of a data layer, are a record-by-record description of each independent “row” in a geospatial attribute table or database. 
+
+Models represent model software packages and configurations, which may be associated with input and/or output artifacts or data layers. Model configurations represent a unique way of running a model, exposing concrete inputs, outputs, and parameters. These metadata are under active development.
 
 ### Field Definition Glossary 
 Each metadata field below is defined with the following elements:
@@ -26,7 +30,7 @@ Each metadata field below is defined with the following elements:
 ## Dataset
 ### Administrative
 **Field Name**: License  
-**Description**: License associated with the resource.  
+**Description**: License associated with the digital object.  
 **Use**: Optional  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -34,7 +38,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Metadata Date  
-**Description**: Date the metadata record was last updated.  
+**Description**: Date the metadata record was last updated. Must conform to the ISO 8601 standard.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -42,7 +46,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Use Constraint  
-**Description**: Constraints or restrictions on use of the resource.  
+**Description**: Constraints or restrictions on use of the digital object.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
@@ -55,16 +59,8 @@ Each metadata field below is defined with the following elements:
 **Use**: Recommended  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
-**Format**: Text or Controlled Terms  
-**Controlled Terms URL**: TBD  
-
-**Field Name**: Contact Cell Phone  
-**Description**: Cell phone number for the responsible point of contact.  
-**Use**: Conditionally Required  
-**Use Condition**: Contact Name  
-**Accepts Multiple Values**: Yes  
-**Format**: Text  
-**Controlled Terms URL**: None  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
 
 **Field Name**: Contact Email  
 **Description**: Email for the responsible point of contact.  
@@ -75,22 +71,14 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Contact Name  
-**Description**: Name of the responsible point of contact.  
-**Use**: Required for Dataset, Optional at lower levels  
+**Description**: Name of a person who is a responsible point of contact.  
+**Use**: Required for Dataset, Optional for Artifact, Layer, and Model.  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
 **Controlled Terms URL**: None  
 
-**Field Name**: Contact Role  
-**Description**: The role or responsibility of the point of contact.  
-**Use**: Conditionally Required  
-**Use Condition**: Contact Name  
-**Accepts Multiple Values**: Yes  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: TBD  
-
-**Field Name**: Contact Work Phone  
+**Field Name**: Contact Phone Number  
 **Description**: Work phone number for the responsible point of contact.  
 **Use**: Conditionally Required  
 **Use Condition**: Contact Name  
@@ -98,9 +86,17 @@ Each metadata field below is defined with the following elements:
 **Format**: Text  
 **Controlled Terms URL**: None  
 
+**Field Name**: Contact Role  
+**Description**: The role(s) of the point of contact toward the digital object and its management.  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Name  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/contact_role_terms.csv  
+
 ### Coverage
 **Field Name**: Spatial Extent (Decimal Degrees)  
-**Description**: Coordinates for the bounding box describing the extent of the resource in decimal degrees.  
+**Description**: Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.  
 **Use**: Recommended  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
@@ -109,12 +105,20 @@ Each metadata field below is defined with the following elements:
 
 ### Discovery
 **Field Name**: Description   
-**Description**: An account of the resource. Description may include but is not limited to: an abstract, a table of contents, or a free-text account of the resource.  
+**Description**: An account of the digital object. The description may include an abstract, a table of contents, or a free-text account.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Text  
 **Controlled Terms URL**: None  
+
+**Field Name**: Digital Object Type  
+**Description**: The type of content in the digital object, and optionally format. Used when a file or files are uploaded to TDIS.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv  
 
 **Field Name**: Keyword Term  
 **Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
@@ -133,7 +137,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_vocabulary_terms.csv  
 
 **Field Name**: Purpose  
-**Description**: Purpose for the creation of this resource and/or expected use.  
+**Description**: A description of the purpose for the creation of this digital object and/or the expected use.  
 **Use**: Optional  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -141,7 +145,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Title  
-**Description**: A name given to the resource.  
+**Description**: A name given to the digital object.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -149,8 +153,8 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Reuse
-**Field Name**: Provenance  
-**Description**: A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the resource.  
+**Field Name**: Chain of Custody  
+**Description**: A statement of any changes in ownership and custody of the digital object since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the digital object.  
 **Use**: Recommended  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
@@ -160,20 +164,28 @@ Each metadata field below is defined with the following elements:
 ## Artifact
 ### Access
 **Field Name**: Distribution Method  
-**Description**: Description of the digital method of distribution.  
+**Description**: A statement describing the method of distribution and access provided by the Distributor or Publisher.  
 **Use**: Conditionally Required  
 **Use Condition**: Distributor or Publisher  
 **Accepts Multiple Values**: No  
 **Format**: Text  
 **Controlled Terms URL**: None  
 
+**Field Name**: Distribution URL  
+**Description**: The URL where the digital object can be accessed via a service endpoint, API, etc.  
+**Use**: Conditionally Required  
+**Use Condition**: Distributor or Publisher  
+**Accepts Multiple Values**: No  
+**Format**: URL  
+**Controlled Terms URL**: None  
+
 **Field Name**: Distributor or Publisher  
-**Description**: The organization sharing, publishing, or otherwise responsible for providing access to the resource.  
+**Description**: The organization sharing, publishing, or otherwise responsible for providing access to the digital object.  
 **Use**: Conditionally Required  
 **Use Condition**: Distribution URL  
 **Accepts Multiple Values**: No  
-**Format**: Text or Controlled Terms  
-**Controlled Terms URL**: TBD  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
 
 **Field Name**: Service Endpoint Type  
 **Description**: The type of service endpoint used for distribution.  
@@ -183,25 +195,25 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: TBD  
 
-**Field Name**: Service Endpoint URL  
-**Description**: URL of the service endpoint, API, etc.  
-**Use**: Conditionally Required  
-**Use Condition**: Service Endpoint Type  
-**Accepts Multiple Values**: No  
-**Format**: URL  
-**Controlled Terms URL**: None  
-
 ### Administrative
 **Field Name**: Dataset Identifier  
-**Description**: The TDIS unique identifier for the Dataset the resource is a part of.  
+**Description**: The TDIS unique identifier for the associated dataset.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
-**Format**: TDIS Identifier  
+**Format**: TDIS Identifier: UUID  
+**Controlled Terms URL**: None  
+
+**Field Name**: Date Created  
+**Description**: Date the digital object was originally created. Must conform to the ISO 8601 standard.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Date: ISO 8601  
 **Controlled Terms URL**: None  
 
 **Field Name**: Date Last Updated  
-**Description**: Date the resource was last updated, or creation date if no updates have been made, YYYY-MM-DD or YYYY-MM or YYYY.  
+**Description**: The date the digital object was last updated. Must conform to the ISO 8601 standard.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -209,7 +221,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: License  
-**Description**: License associated with the resource.  
+**Description**: License associated with the digital object.  
 **Use**: Optional  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -217,7 +229,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Metadata Date  
-**Description**: Date the metadata record was last updated.  
+**Description**: Date the metadata record was last updated. Must conform to the ISO 8601 standard.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -225,7 +237,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Update Frequency  
-**Description**: If the data are regularly updated, how often.  
+**Description**: How often the content is updated.  
 **Use**: Recommended  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -233,7 +245,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/update_frequency_terms.csv  
 
 **Field Name**: Use Constraint  
-**Description**: Constraints or restrictions on use of the resource.  
+**Description**: Constraints or restrictions on use of the digital object.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
@@ -241,7 +253,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/use_constraint_terms.csv  
 
 **Field Name**: Version  
-**Description**: Version number of the resource.  
+**Description**: Version number of the digital object.  
 **Use**: Optional  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -254,16 +266,8 @@ Each metadata field below is defined with the following elements:
 **Use**: Recommended  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
-**Format**: Text or Controlled Terms  
-**Controlled Terms URL**: TBD  
-
-**Field Name**: Contact Cell Phone  
-**Description**: Cell phone number for the responsible point of contact.  
-**Use**: Conditionally Required  
-**Use Condition**: Contact Name  
-**Accepts Multiple Values**: Yes  
-**Format**: Text  
-**Controlled Terms URL**: None  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
 
 **Field Name**: Contact Email  
 **Description**: Email for the responsible point of contact.  
@@ -274,28 +278,28 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Contact Name  
-**Description**: Name of the responsible point of contact.  
-**Use**: Required for Dataset, Optional at lower levels  
+**Description**: Name of a person who is a responsible point of contact.  
+**Use**: Required for Dataset, Optional for Artifact, Layer, and Model.  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
 **Controlled Terms URL**: None  
 
-**Field Name**: Contact Role  
-**Description**: The role or responsibility of the point of contact.  
-**Use**: Conditionally Required  
-**Use Condition**: Contact Name  
-**Accepts Multiple Values**: Yes  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: TBD  
-
-**Field Name**: Contact Work Phone  
+**Field Name**: Contact Phone Number  
 **Description**: Work phone number for the responsible point of contact.  
 **Use**: Conditionally Required  
 **Use Condition**: Contact Name  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
 **Controlled Terms URL**: None  
+
+**Field Name**: Contact Role  
+**Description**: The role(s) of the point of contact toward the digital object and its management.  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Name  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/contact_role_terms.csv  
 
 ### Coverage
 **Field Name**: Placename or Locality  
@@ -307,7 +311,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: http://www.geonames.org  
 
 **Field Name**: Spatial Extent (Decimal Degrees)  
-**Description**: Coordinates for the bounding box describing the extent of the resource in decimal degrees.  
+**Description**: Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.  
 **Use**: Recommended  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
@@ -315,7 +319,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Time Period Covered  
-**Description**: Time period to which the data refer as a single date/time, multiple dates/times, or a range of dates/times in ISO 8601. This reflects the time period covered by the data, not the dates of coding or making documents machine-readable or the dates the data were collected. Also known as span.  
+**Description**: Time period to which the data refer as a single date-time or an interval. Must conform to the ISO 8601 standard. This reflects the time period covered by the data, not the dates of coding or making documents machine-readable or the dates the data were collected. Also known as the "span" covered by the data, this may reflect the dates during which an event occured.  
 **Use**: Recommended  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
@@ -339,8 +343,16 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: TBD  
 
+**Field Name**: Creator  
+**Description**: The name of a person or organization who should be cited as contributing to the initial creation of the digital object. Also referred to as an "author" or "contributor".  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
 **Field Name**: Description   
-**Description**: An account of the resource. Description may include but is not limited to: an abstract, a table of contents, or a free-text account of the resource.  
+**Description**: An account of the digital object. The description may include an abstract, a table of contents, or a free-text account.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -348,10 +360,10 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Digital Object Type  
-**Description**: The type of content in the resource and optionally format. For files uploaded to TDIS.  
+**Description**: The type of content in the digital object, and optionally format. Used when a file or files are uploaded to TDIS.  
 **Use**: Recommended  
 **Use Condition**: None  
-**Accepts Multiple Values**: No  
+**Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv  
 
@@ -372,7 +384,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_vocabulary_terms.csv  
 
 **Field Name**: Purpose  
-**Description**: Purpose for the creation of this resource and/or expected use.  
+**Description**: A description of the purpose for the creation of this digital object and/or the expected use.  
 **Use**: Optional  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -380,7 +392,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Title  
-**Description**: A name given to the resource.  
+**Description**: A name given to the digital object.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -388,8 +400,16 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Reuse
+**Field Name**: Chain of Custody  
+**Description**: A statement of any changes in ownership and custody of the digital object since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the digital object.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
 **Field Name**: Collection Method  
-**Description**: The procedure, technique, or mode of inquiry used to attain data.  
+**Description**: The procedure, technique, or mode of inquiry used to attain data. Also referred to as "Data Capture Method".  
 **Use**: Recommended  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
@@ -405,7 +425,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Processing Step Date  
-**Description**: The date when a particular processing step was completed, YYYY-MM-DD or YYYY-MM or YYYY.   
+**Description**: The date when a particular processing step was completed. Must conform to the ISO 8601 standard.  
 **Use**: Optional  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
@@ -420,31 +440,39 @@ Each metadata field below is defined with the following elements:
 **Format**: Text  
 **Controlled Terms URL**: None  
 
-**Field Name**: Provenance  
-**Description**: A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the resource.  
-**Use**: Recommended  
-**Use Condition**: None  
-**Accepts Multiple Values**: Yes  
+**Field Name**: Processing Step Source  
+**Description**: The name of a person or organization who performed the modifications described in the associated Processing Step Description.  
+**Use**: Conditionally Required  
+**Use Condition**: Processing Step Date  
+**Accepts Multiple Values**: No  
 **Format**: Text  
-**Controlled Terms URL**: None  
+**Controlled Terms URL**: None   
 
 ## Layer
 ### Access
 **Field Name**: Distribution Method  
-**Description**: Description of the digital method of distribution.  
+**Description**: A statement describing the method of distribution and access provided by the Distributor or Publisher.  
 **Use**: Conditionally Required  
 **Use Condition**: Distributor or Publisher  
 **Accepts Multiple Values**: No  
 **Format**: Text  
 **Controlled Terms URL**: None  
 
+**Field Name**: Distribution URL  
+**Description**: The URL where the digital object can be accessed via a service endpoint, API, etc.  
+**Use**: Conditionally Required  
+**Use Condition**: Distributor or Publisher  
+**Accepts Multiple Values**: No  
+**Format**: URL  
+**Controlled Terms URL**: None  
+
 **Field Name**: Distributor or Publisher  
-**Description**: The organization sharing, publishing, or otherwise responsible for providing access to the resource.  
+**Description**: The organization sharing, publishing, or otherwise responsible for providing access to the digital object.  
 **Use**: Conditionally Required  
 **Use Condition**: Distribution URL  
 **Accepts Multiple Values**: No  
-**Format**: Text or Controlled Terms  
-**Controlled Terms URL**: TBD  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
 
 **Field Name**: Service Endpoint Type  
 **Description**: The type of service endpoint used for distribution.  
@@ -454,25 +482,25 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: TBD  
 
-**Field Name**: Service Endpoint URL  
-**Description**: URL of the service endpoint, API, etc.  
-**Use**: Conditionally Required  
-**Use Condition**: Service Endpoint Type  
-**Accepts Multiple Values**: No  
-**Format**: URL  
-**Controlled Terms URL**: None  
-
 ### Administrative
 **Field Name**: Dataset Identifier  
-**Description**: The TDIS unique identifier for the Dataset the resource is a part of.  
+**Description**: The TDIS unique identifier for the associated dataset.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
-**Format**: TDIS Identifier  
+**Format**: TDIS Identifier: UUID  
+**Controlled Terms URL**: None  
+
+**Field Name**: Date Created  
+**Description**: Date the digital object was originally created. Must conform to the ISO 8601 standard.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Date: ISO 8601  
 **Controlled Terms URL**: None  
 
 **Field Name**: Date Last Updated  
-**Description**: Date the resource was last updated, or creation date if no updates have been made, YYYY-MM-DD or YYYY-MM or YYYY.  
+**Description**: The date the digital object was last updated. Must conform to the ISO 8601 standard.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -480,7 +508,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Metadata Date  
-**Description**: Date the metadata record was last updated.  
+**Description**: Date the metadata record was last updated. Must conform to the ISO 8601 standard.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -488,7 +516,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Update Frequency  
-**Description**: If the data are regularly updated, how often.  
+**Description**: How often the content is updated.  
 **Use**: Recommended  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -496,7 +524,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/update_frequency_terms.csv  
 
 **Field Name**: Use Constraint  
-**Description**: Constraints or restrictions on use of the resource.  
+**Description**: Constraints or restrictions on use of the digital object.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
@@ -509,16 +537,8 @@ Each metadata field below is defined with the following elements:
 **Use**: Recommended  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
-**Format**: Text or Controlled Terms  
-**Controlled Terms URL**: TBD  
-
-**Field Name**: Contact Cell Phone  
-**Description**: Cell phone number for the responsible point of contact.  
-**Use**: Conditionally Required  
-**Use Condition**: Contact Name  
-**Accepts Multiple Values**: Yes  
-**Format**: Text  
-**Controlled Terms URL**: None  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
 
 **Field Name**: Contact Email  
 **Description**: Email for the responsible point of contact.  
@@ -529,28 +549,28 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Contact Name  
-**Description**: Name of the responsible point of contact.  
-**Use**: Required for Dataset, Optional at lower levels  
+**Description**: Name of a person who is a responsible point of contact.  
+**Use**: Required for Dataset, Optional for Artifact, Layer, and Model.  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
 **Controlled Terms URL**: None  
 
-**Field Name**: Contact Role  
-**Description**: The role or responsibility of the point of contact.  
-**Use**: Conditionally Required  
-**Use Condition**: Contact Name  
-**Accepts Multiple Values**: Yes  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: TBD  
-
-**Field Name**: Contact Work Phone  
+**Field Name**: Contact Phone Number  
 **Description**: Work phone number for the responsible point of contact.  
 **Use**: Conditionally Required  
 **Use Condition**: Contact Name  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
 **Controlled Terms URL**: None  
+
+**Field Name**: Contact Role  
+**Description**: The role(s) of the point of contact toward the digital object and its management.  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Name  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/contact_role_terms.csv  
 
 ### Coverage
 **Field Name**: Placename or Locality  
@@ -562,7 +582,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: http://www.geonames.org  
 
 **Field Name**: Spatial Extent (Decimal Degrees)  
-**Description**: Coordinates for the bounding box describing the extent of the resource in decimal degrees.  
+**Description**: Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.  
 **Use**: Recommended  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
@@ -570,7 +590,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Time Period Covered  
-**Description**: Time period to which the data refer as a single date/time, multiple dates/times, or a range of dates/times in ISO 8601. This reflects the time period covered by the data, not the dates of coding or making documents machine-readable or the dates the data were collected. Also known as span.  
+**Description**: Time period to which the data refer as a single date-time or an interval. Must conform to the ISO 8601 standard. This reflects the time period covered by the data, not the dates of coding or making documents machine-readable or the dates the data were collected. Also known as the "span" covered by the data, this may reflect the dates during which an event occured.  
 **Use**: Recommended  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
@@ -594,8 +614,16 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: TBD  
 
+**Field Name**: Creator  
+**Description**: The name of a person or organization who should be cited as contributing to the initial creation of the digital object. Also referred to as an "author" or "contributor".  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
 **Field Name**: Description   
-**Description**: An account of the resource. Description may include but is not limited to: an abstract, a table of contents, or a free-text account of the resource.  
+**Description**: An account of the digital object. The description may include an abstract, a table of contents, or a free-text account.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -603,10 +631,10 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Digital Object Type  
-**Description**: The type of content in the resource and optionally format. For files uploaded to TDIS.  
+**Description**: The type of content in the digital object, and optionally format. Used when a file or files are uploaded to TDIS.  
 **Use**: Recommended  
 **Use Condition**: None  
-**Accepts Multiple Values**: No  
+**Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv  
 
@@ -627,7 +655,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_vocabulary_terms.csv  
 
 **Field Name**: Purpose  
-**Description**: Purpose for the creation of this resource and/or expected use.  
+**Description**: A description of the purpose for the creation of this digital object and/or the expected use.  
 **Use**: Optional  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -635,7 +663,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Title  
-**Description**: A name given to the resource.  
+**Description**: A name given to the digital object.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -643,10 +671,18 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Reuse
+**Field Name**: Attribute Accuracy  
+**Description**: A statement giving a general assessment of the overall accuracy or completeness of the attribute table associated with the layer.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
 **Field Name**: Attribute Description  
 **Description**: Description of the attribute (field, variable) within the attribute table for this layer.  
-**Use**: Optional  
-**Use Condition**: TBD  
+**Use**: Required  
+**Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
 **Controlled Terms URL**: None  
@@ -654,29 +690,45 @@ Each metadata field below is defined with the following elements:
 **Field Name**: Attribute Domain Type  
 **Description**: Domain for values in the attribute (field, variable) within the attribute table.  
 **Use**: Optional   
-**Use Condition**: TBD  
+**Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/geo_attribute_value_type_terms.csv  
 
 **Field Name**: Attribute Name  
 **Description**: Name of the attribute (field, variable) within the attribute table for this layer.  
-**Use**: Optional  
-**Use Condition**: TBD  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Chain of Custody  
+**Description**: A statement of any changes in ownership and custody of the digital object since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the digital object.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Code Set Name  
+**Description**: The official name of the established code set.  
+**Use**: Conditionally Required  
+**Use Condition**: Attribute Domain Type: Established Code Set  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
 **Controlled Terms URL**: None  
 
 **Field Name**: Code Set URL  
-**Description**: URL for the published code set.  
-**Use**: Conditionally Required  
-**Use Condition**: Attribute Domain Type: Published Code Set  
+**Description**: URL for the established code set.  
+**Use**: Conditionally Recommended  
+**Use Condition**: Attribute Domain Type: Established Code Set  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
 **Controlled Terms URL**: None  
 
 **Field Name**: Collection Method  
-**Description**: The procedure, technique, or mode of inquiry used to attain data.  
+**Description**: The procedure, technique, or mode of inquiry used to attain data. Also referred to as "Data Capture Method".  
 **Use**: Recommended  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
@@ -720,8 +772,8 @@ Each metadata field below is defined with the following elements:
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: TBD  
-**Format**: Text  
-**Controlled Terms URL**: None  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv  
 
 **Field Name**: Horizontal Coordinate System  
 **Description**: TBD  
@@ -740,7 +792,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: https://www.ngs.noaa.gov/datums/horizontal/  
 
 **Field Name**: Processing Step Date  
-**Description**: The date when a particular processing step was completed, YYYY-MM-DD or YYYY-MM or YYYY.   
+**Description**: The date when a particular processing step was completed. Must conform to the ISO 8601 standard.  
 **Use**: Optional  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
@@ -755,16 +807,24 @@ Each metadata field below is defined with the following elements:
 **Format**: Text  
 **Controlled Terms URL**: None  
 
-**Field Name**: Provenance  
-**Description**: A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the resource.  
-**Use**: Recommended  
-**Use Condition**: None  
+**Field Name**: Processing Step Source  
+**Description**: The name of a person or organization who performed the modifications described in the associated Processing Step Description.  
+**Use**: Conditionally Required  
+**Use Condition**: Processing Step Date  
+**Accepts Multiple Values**: No  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Value Range Maximum  
+**Description**: The maximum value in a range of valid values.  
+**Use**: Conditionally Required  
+**Use Condition**: Attribute Domain Type: Range  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
 **Controlled Terms URL**: None  
 
-**Field Name**: Value Range  
-**Description**: Range of valid values separated by a dash ("-").  
+**Field Name**: Value Range Minimum  
+**Description**: The minimumum value in a range of valid values.  
 **Use**: Conditionally Required  
 **Use Condition**: Attribute Domain Type: Range  
 **Accepts Multiple Values**: Yes  
@@ -784,8 +844,8 @@ Each metadata field below is defined with the following elements:
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: TBD  
-**Format**: Text  
-**Controlled Terms URL**: None  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv  
 
 **Field Name**: Vertical Coordinate System  
 **Description**: TBD  
@@ -806,7 +866,7 @@ Each metadata field below is defined with the following elements:
 ## Feature
 ### Administrative
 **Field Name**: Date Last Updated  
-**Description**: Date the resource was last updated, or creation date if no updates have been made, YYYY-MM-DD or YYYY-MM or YYYY.  
+**Description**: The date the digital object was last updated. Must conform to the ISO 8601 standard.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -831,19 +891,11 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Spatial Extent (Decimal Degrees)  
-**Description**: Coordinates for the bounding box describing the extent of the resource in decimal degrees.  
+**Description**: Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.  
 **Use**: Recommended  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Array: Decimal Degrees or Geometry: Polygon  
-**Controlled Terms URL**: None  
-
-**Field Name**: Width (Meters)  
-**Description**: Numeric value for the width dimension of the feature in meters.  
-**Use**: Conditionally Recommended  
-**Use Condition**: Spatial Extent: None  
-**Accepts Multiple Values**: No  
-**Format**: Numeric  
 **Controlled Terms URL**: None  
 
 ### Reuse
@@ -852,13 +904,287 @@ Each metadata field below is defined with the following elements:
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: TBD  
-**Format**: Text  
-**Controlled Terms URL**: None  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv  
 
 **Field Name**: Vertical Accuracy Method  
 **Description**: Method for determining accuracy of the data.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: TBD  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv  
+
+## Model
+### Access
+**Field Name**: Distribution Method  
+**Description**: A statement describing the method of distribution and access provided by the Distributor or Publisher.  
+**Use**: Conditionally Required  
+**Use Condition**: Distributor or Publisher  
+**Accepts Multiple Values**: No  
 **Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Distribution URL  
+**Description**: The URL where the digital object can be accessed via a service endpoint, API, etc.  
+**Use**: Conditionally Required  
+**Use Condition**: Distributor or Publisher  
+**Accepts Multiple Values**: No  
+**Format**: URL  
+**Controlled Terms URL**: None  
+
+**Field Name**: Distributor or Publisher  
+**Description**: The organization sharing, publishing, or otherwise responsible for providing access to the digital object.  
+**Use**: Conditionally Required  
+**Use Condition**: Distribution URL  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
+
+**Field Name**: Service Endpoint Type  
+**Description**: The type of service endpoint used for distribution.  
+**Use**: Conditionally Required  
+**Use Condition**: Service Endpoint URL  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: TBD  
+
+### Administrative
+**Field Name**: Dataset Identifier  
+**Description**: The TDIS unique identifier for the associated dataset.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: TDIS Identifier: UUID  
+**Controlled Terms URL**: None  
+
+**Field Name**: Date Created  
+**Description**: Date the digital object was originally created. Must conform to the ISO 8601 standard.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Date: ISO 8601  
+**Controlled Terms URL**: None  
+
+**Field Name**: Date Last Updated  
+**Description**: The date the digital object was last updated. Must conform to the ISO 8601 standard.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Date: ISO 8601  
+**Controlled Terms URL**: None  
+
+**Field Name**: License  
+**Description**: License associated with the digital object.  
+**Use**: Optional  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Metadata Date  
+**Description**: Date the metadata record was last updated. Must conform to the ISO 8601 standard.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Date: ISO 8601  
+**Controlled Terms URL**: None  
+
+**Field Name**: Update Frequency  
+**Description**: How often the content is updated.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/update_frequency_terms.csv  
+
+**Field Name**: Use Constraint  
+**Description**: Constraints or restrictions on use of the digital object.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/use_constraint_terms.csv  
+
+**Field Name**: Version  
+**Description**: Version number of the digital object.  
+**Use**: Optional  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: TBD  
+**Controlled Terms URL**: None  
+
+### Contact Information
+**Field Name**: Contact Affiliation  
+**Description**: Organizational affiliation for the responsible point of contact.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
+
+**Field Name**: Contact Email  
+**Description**: Email for the responsible point of contact.  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Name  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Contact Name  
+**Description**: Name of a person who is a responsible point of contact.  
+**Use**: Required for Dataset, Optional for Artifact, Layer, and Model.  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Contact Phone Number  
+**Description**: Work phone number for the responsible point of contact.  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Name  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Contact Role  
+**Description**: The role(s) of the point of contact toward the digital object and its management.  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Name  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/contact_role_terms.csv  
+
+### Coverage
+**Field Name**: Placename or Locality  
+**Description**: Placename from GeoNames (http://www.geonames.org).  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Text or Controlled Terms  
+**Controlled Terms URL**: http://www.geonames.org  
+
+**Field Name**: Spatial Extent (Decimal Degrees)  
+**Description**: Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Array: Decimal Degrees or Geometry: Polygon  
+**Controlled Terms URL**: None  
+
+**Field Name**: Time Period Covered  
+**Description**: Time period to which the data refer as a single date-time or an interval. Must conform to the ISO 8601 standard. This reflects the time period covered by the data, not the dates of coding or making documents machine-readable or the dates the data were collected. Also known as the "span" covered by the data, this may reflect the dates during which an event occured.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Date: ISO 8601  
+**Controlled Terms URL**: None  
+
+### Discovery
+**Field Name**: Creator  
+**Description**: The name of a person or organization who should be cited as contributing to the initial creation of the digital object. Also referred to as an "author" or "contributor".  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Description   
+**Description**: An account of the digital object. The description may include an abstract, a table of contents, or a free-text account.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Digital Object Type  
+**Description**: The type of content in the digital object, and optionally format. Used when a file or files are uploaded to TDIS.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv  
+
+**Field Name**: Keyword Term  
+**Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
+**Use**: Conditionally Required  
+**Use Condition**: Keyword Vocabulary  
+**Accepts Multiple Values**: Yes  
+**Format**: Array:Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Keyword Vocabulary  
+**Description**: Vocabulary for subject matter keywords listed in Keyword Term.  
+**Use**: Conditionally Required  
+**Use Condition**: Keyword Terms  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_vocabulary_terms.csv  
+
+**Field Name**: Model Type  
+**Description**: The type of model.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/model_type_terms.csv  
+
+**Field Name**: Software Name  
+**Description**: The name of the software used.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/software_name_terms.csv  
+
+**Field Name**: Software Version  
+**Description**: The version of the software used.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Numeric  
+**Controlled Terms URL**: None  
+
+**Field Name**: Title  
+**Description**: A name given to the digital object.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+### Reuse
+**Field Name**: Chain of Custody  
+**Description**: A statement of any changes in ownership and custody of the digital object since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the digital object.  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+## Model Configuration
+### Administrative
+**Field Name**: Version  
+**Description**: Version number of the digital object.  
+**Use**: Optional  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: TBD  
+**Controlled Terms URL**: None  
+
+### Reuse
+**Field Name**: Input Identifier  
+**Description**: The TDIS unique identifier for an Artifact or Layer serving as input.  
+**Use**: Optional  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: TDIS Identifier: UUID  
+**Controlled Terms URL**: None  
+
+**Field Name**: Output Identifier  
+**Description**: The TDIS unique identifier for an Artifact or Layer serving as output.  
+**Use**: Optional  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: TDIS Identifier: UUID  
 **Controlled Terms URL**: None  
