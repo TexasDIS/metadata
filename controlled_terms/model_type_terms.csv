@@ -1,8 +1,12 @@
-term,associated_software_example
-Hydraulic,HEC-RAS
-Hydrologic,HEC-HMS
-Coastal,Delft3D
-Coupled Hydraulic Hydrodynamic,
-Combined Riverine-Coastal,
-Other,
-Unknown,
+term,associated_software_example,description
+Hydraulic,HEC-RAS,
+Hydrologic,HEC-HMS,
+2D,,
+Stormdrain,,
+Coastal,Delft3D,
+Coupled Hydraulic Hydrodynamic,,
+Combined Riverine-Coastal,,
+Risk Assessment,,
+Economics or Benefit Cost Analysis,,
+Other,,
+Unknown,,
