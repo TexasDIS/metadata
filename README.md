@@ -34,4 +34,4 @@ For CSV files containing controlled terms for particular metadata fields, see: [
 
 For examples and templates showing use of TDIS metadata fields, see: [examples_and_templates](https://github.com/TexasDIS/metadata/tree/main/examples_and_templates)
 
-For documentation regarding data quality assessment, see: [data_quality_assessment](https://github.com/TexasDIS/metadata/tree/main/data_quality_assessment)
+For documentation regarding data quality assessment, see: [data_assessment_indices](https://github.com/TexasDIS/metadata/tree/main/data_assessment_indices)
