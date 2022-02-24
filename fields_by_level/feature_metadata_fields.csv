@@ -1,7 +1,7 @@
-,status,metadata_level,metadata_group,display_name,definition,example,use,use_condition,repeatable,validation,published_terms
-6,Public,Feature,Administrative,Date Last Updated,The date the digital object was last updated. Must conform to the ISO 8601 standard.,2021-11-10,Required,None,No,Date: ISO 8601,None
-35,Public,Feature,Coverage,Area (Square Meters),Numeric value for the area of the feature in square meters.,TBD,Conditionally Required,Spatial Extent: None,No,Numeric,None
-33,Public,Feature,Coverage,Length (Meters),Numeric value for the length dimension of the feature in meters.,TBD,Conditionally Recommended,Spatial Extent: None,No,Numeric,None
-32,Public,Feature,Coverage,Spatial Extent (Decimal Degrees),"Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.",TBD,Recommended,None,Yes,Array: Decimal Degrees or Geometry: Polygon,None
-74,Public,Feature,Reuse,Horizontal Accuracy Method,Method for determining accuracy of the data.,TBD,Required,None,TBD,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv
-75,Public,Feature,Reuse,Vertical Accuracy Method,Method for determining accuracy of the data.,TBD,Required,None,TBD,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv
+,status,metadata_level,metadata_group,display_name,definition,example,use,use_condition,accepts_mulitple_values,validation,published_terms
+4,Core,Feature,Administrative,Date Last Updated,The date the digital object was last updated. Must conform to the ISO 8601 standard.,2021-11-10,Required,None,No,Date: ISO 8601,None
+23,Core,Feature,Coverage,Area (Square Meters),Numeric value for the area of the feature in square meters.,TBD,Conditionally Required,Spatial Extent: None,No,Numeric,None
+22,Core,Feature,Coverage,Length (Meters),Numeric value for the length dimension of the feature in meters.,TBD,Conditionally Recommended,Spatial Extent: None,No,Numeric,None
+21,Core,Feature,Coverage,Spatial Extent (Decimal Degrees),"Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.",TBD,Recommended,None,Yes,Array: Decimal Degrees or Geometry: Polygon,None
+56,Core,Feature,Reuse,Horizontal Accuracy Method,Method for determining accuracy of the data.,TBD,Required,None,TBD,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv
+57,Core,Feature,Reuse,Vertical Accuracy Method,Method for determining accuracy of the data.,TBD,Required,None,TBD,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv

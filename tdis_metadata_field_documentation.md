@@ -1,43 +1,40 @@
 # TDIS Metadata Documentation
-*Last revised: 2021-11-16*
+*Last revised: 2022-02-24*
 
 ## Metadata Organization
-Within the current TDIS model, "datasets" contain "artifacts", "data layers", and "models." Data layers can also contain "features", and models can have an associated "configuration". Datasets, artifacts, data layers, features, models, and configurations each have descriptive metadata associated with them.  
+Within the current TDIS model, "collections" contain "artifacts", "data layers", and "models." 
+Data layers can also contain "features", and models can have an associated "configuration". 
+Collections, artifacts, data layers, features, models, and configurations each have descriptive metadata associated with them.  
 
 ![TDIS Model Diagram](https://github.com/TexasDIS/metadata/blob/main/visuals/tdis-model-diagram.png)
 
-Datasets group one or more layers, artifacts and/or models together. For example, a complex geospatial database object would be represented as a dataset containing multiple data layers.
+Collections group one or more layers, artifacts and/or models together. 
+For example, a complex geospatial database object would be represented as a collection containing multiple data layers.
 
-Artifacts represent digital objects such as content within documents, data within spreadsheets, or other data made available via service endpoints. Artifacts do not contain geometry information (points, lines, or polygons) or images with spatial information. 
+Artifacts represent digital objects such as text and images within documents, data within spreadsheets, or other data made available via service endpoints. 
+Artifacts do not contain geometry information (points, lines, or polygons) or images with spatial information. 
 
 Data layers represent digital objects with intrinsic spatial characteristics and include (but are not limited to) streets, city boundaries, river gages, and imagery with geospatial information contained within files or made available via service endpoints. 
 
 Features, as a part of a data layer, are a record-by-record description of each independent “row” in a geospatial attribute table or database. 
 
-Models represent model software packages and configurations, which may be associated with input and/or output artifacts or data layers. Model configurations represent a unique way of running a model, exposing concrete inputs, outputs, and parameters. These metadata are under active development.
+Models represent model software packages and configurations, which may be associated with input and/or output artifacts or data layers. 
+Model configurations represent a unique way of running a model, exposing concrete inputs, outputs, and parameters. These metadata are under active development.
 
 ### Field Definition Glossary 
 Each metadata field below is defined with the following elements:
 
 - **Field Name**: A display name for the metadata field.
 - **Description**: Text describing the information that the metadata field should contain as a value. 
-- **Use**: An indication of whether the metadata field is "Required", "Recommended", "Optional", "Conditionally Required", or "Conditionally Recommended" within the level (e.g. Dataset, Artifact, Data Layer, Feature).
+- **Use**: An indication of whether the metadata field is "Required", "Recommended", "Optional", "Conditionally Required", or "Conditionally Recommended" within the level (e.g. Collection, Artifact, Data Layer, Feature).
 - **Use Condition**: The condition dictating when a "Conditionally Required" metadata field becomes "Required", or a "Conditionally Recommended" metadata field becomes "Recommended". "None" indicates that there are no conditions.
-- **Accepts Multiple Values**: "Yes" or "No" indicating that multiple values can be added to the metadata field.
+- **Accepts Multiple Values**: "Yes" indicating that multiple values can be added to the metadata field, or "No".
 - **Format**: Indication of the type of value the field takes, this will be used for validation.
 - **Controlled Terms URL**: A link to published terms that are valid.
 
-## Dataset
+## Collection
 ### Administrative
-**Field Name**: License  
-**Description**: License associated with the digital object.  
-**Use**: Optional  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Text  
-**Controlled Terms URL**: None  
-
-**Field Name**: Metadata Date  
+**Field Name**: Date Metadata Updated  
 **Description**: Date the metadata record was last updated. Must conform to the ISO 8601 standard.  
 **Use**: Required  
 **Use Condition**: None  
@@ -45,13 +42,21 @@ Each metadata field below is defined with the following elements:
 **Format**: Date: ISO 8601  
 **Controlled Terms URL**: None  
 
-**Field Name**: Use Constraint  
-**Description**: Constraints or restrictions on use of the digital object.  
+**Field Name**: Identifier  
+**Description**: The TDIS unique identifier for the digital object.  
 **Use**: Required  
 **Use Condition**: None  
-**Accepts Multiple Values**: Yes  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/use_constraint_terms.csv  
+**Accepts Multiple Values**: No  
+**Format**: TDIS Identifier: UUID  
+**Controlled Terms URL**: None  
+
+**Field Name**: License  
+**Description**: License associated with the digital object.  
+**Use**: Optional  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Text  
+**Controlled Terms URL**: None  
 
 ### Contact Information
 **Field Name**: Contact Affiliation  
@@ -72,7 +77,7 @@ Each metadata field below is defined with the following elements:
 
 **Field Name**: Contact Name  
 **Description**: Name of a person who is a responsible point of contact.  
-**Use**: Required for Dataset, Optional for Artifact, Layer, and Model.  
+**Use**: Required for Collection, Optional for Artifact, Layer, and Model  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
@@ -196,8 +201,8 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: TBD  
 
 ### Administrative
-**Field Name**: Dataset Identifier  
-**Description**: The TDIS unique identifier for the associated dataset.  
+**Field Name**: Collection Identifier  
+**Description**: The TDIS unique identifier for the associated collection.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -220,20 +225,36 @@ Each metadata field below is defined with the following elements:
 **Format**: Date: ISO 8601  
 **Controlled Terms URL**: None  
 
+**Field Name**: Date Metadata Updated  
+**Description**: Date the metadata record was last updated. Must conform to the ISO 8601 standard.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Date: ISO 8601  
+**Controlled Terms URL**: None  
+
+**Field Name**: Date Submitted  
+**Description**: Date the digital object or metadata record was submitted to TDIS. Must conform to the ISO 8601 standard.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Date: ISO 8601  
+**Controlled Terms URL**: None  
+
+**Field Name**: Identifier  
+**Description**: The TDIS unique identifier for the digital object.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: TDIS Identifier: UUID  
+**Controlled Terms URL**: None  
+
 **Field Name**: License  
 **Description**: License associated with the digital object.  
 **Use**: Optional  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Text  
-**Controlled Terms URL**: None  
-
-**Field Name**: Metadata Date  
-**Description**: Date the metadata record was last updated. Must conform to the ISO 8601 standard.  
-**Use**: Required  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Date: ISO 8601  
 **Controlled Terms URL**: None  
 
 **Field Name**: Update Frequency  
@@ -279,7 +300,7 @@ Each metadata field below is defined with the following elements:
 
 **Field Name**: Contact Name  
 **Description**: Name of a person who is a responsible point of contact.  
-**Use**: Required for Dataset, Optional for Artifact, Layer, and Model.  
+**Use**: Required for Collection, Optional for Artifact, Layer, and Model  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
@@ -327,21 +348,37 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Discovery
+**Field Name**: Boundary Type  
+**Description**: The type of geospatial boundary associated with the digital object.   
+**Use**: Optional  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/boundary_type_terms.csv  
+
+**Field Name**: Boundary Unit Identifier  
+**Description**: The unique identifier for a geospatial boundary unit of a particular type, such as a name or code.  
+**Use**: Conditionally Required  
+**Use Condition**: Boundary Type  
+**Accepts Multiple Values**: Yes  
+**Format**: TBD  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/boundary_type_terms.csv  
+
+**Field Name**: Classification System  
+**Description**: TBD  
+**Use**: TBD  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/classification_system_and_terms.csv  
+
 **Field Name**: Classification Term  
 **Description**: TBD  
 **Use**: TBD  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: TBD  
-
-**Field Name**: Classification Type  
-**Description**: TBD  
-**Use**: TBD  
-**Use Condition**: None  
-**Accepts Multiple Values**: Yes  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: TBD  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/classification_system_and_terms.csv  
 
 **Field Name**: Creator  
 **Description**: The name of a person or organization who should be cited as contributing to the initial creation of the digital object. Also referred to as an "author" or "contributor".  
@@ -389,6 +426,22 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Software Name  
+**Description**: The name of the software used to create or work with the digital object.  
+**Use**: Required for Model, Optional for Artifact, Layer  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/software_name_terms.csv  
+
+**Field Name**: Software Version  
+**Description**: The version of the software used to create or work with the digital object.  
+**Use**: Required for Model, Optional for Artifact, Layer  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Numeric  
 **Controlled Terms URL**: None  
 
 **Field Name**: Title  
@@ -446,7 +499,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: Processing Step Date  
 **Accepts Multiple Values**: No  
 **Format**: Text  
-**Controlled Terms URL**: None   
+**Controlled Terms URL**: None  
 
 ## Layer
 ### Access
@@ -483,8 +536,8 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: TBD  
 
 ### Administrative
-**Field Name**: Dataset Identifier  
-**Description**: The TDIS unique identifier for the associated dataset.  
+**Field Name**: Collection Identifier  
+**Description**: The TDIS unique identifier for the associated collection.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -507,12 +560,28 @@ Each metadata field below is defined with the following elements:
 **Format**: Date: ISO 8601  
 **Controlled Terms URL**: None  
 
-**Field Name**: Metadata Date  
+**Field Name**: Date Metadata Updated  
 **Description**: Date the metadata record was last updated. Must conform to the ISO 8601 standard.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Date: ISO 8601  
+**Controlled Terms URL**: None  
+
+**Field Name**: Date Submitted  
+**Description**: Date the digital object or metadata record was submitted to TDIS. Must conform to the ISO 8601 standard.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Date: ISO 8601  
+**Controlled Terms URL**: None  
+
+**Field Name**: Identifier  
+**Description**: The TDIS unique identifier for the digital object.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: TDIS Identifier: UUID  
 **Controlled Terms URL**: None  
 
 **Field Name**: Update Frequency  
@@ -550,7 +619,7 @@ Each metadata field below is defined with the following elements:
 
 **Field Name**: Contact Name  
 **Description**: Name of a person who is a responsible point of contact.  
-**Use**: Required for Dataset, Optional for Artifact, Layer, and Model.  
+**Use**: Required for Collection, Optional for Artifact, Layer, and Model  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
@@ -598,21 +667,37 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Discovery
+**Field Name**: Boundary Type  
+**Description**: The type of geospatial boundary associated with the digital object.   
+**Use**: Optional  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/boundary_type_terms.csv  
+
+**Field Name**: Boundary Unit Identifier  
+**Description**: The unique identifier for a geospatial boundary unit of a particular type, such as a name or code.  
+**Use**: Conditionally Required  
+**Use Condition**: Boundary Type  
+**Accepts Multiple Values**: Yes  
+**Format**: TBD  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/boundary_type_terms.csv  
+
+**Field Name**: Classification System  
+**Description**: TBD  
+**Use**: TBD  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/classification_system_and_terms.csv  
+
 **Field Name**: Classification Term  
 **Description**: TBD  
 **Use**: TBD  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: TBD  
-
-**Field Name**: Classification Type  
-**Description**: TBD  
-**Use**: TBD  
-**Use Condition**: None  
-**Accepts Multiple Values**: Yes  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: TBD  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/classification_system_and_terms.csv  
 
 **Field Name**: Creator  
 **Description**: The name of a person or organization who should be cited as contributing to the initial creation of the digital object. Also referred to as an "author" or "contributor".  
@@ -660,6 +745,22 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Software Name  
+**Description**: The name of the software used to create or work with the digital object.  
+**Use**: Required for Model, Optional for Artifact, Layer  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/software_name_terms.csv  
+
+**Field Name**: Software Version  
+**Description**: The version of the software used to create or work with the digital object.  
+**Use**: Required for Model, Optional for Artifact, Layer  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Numeric  
 **Controlled Terms URL**: None  
 
 **Field Name**: Title  
@@ -950,8 +1051,8 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: TBD  
 
 ### Administrative
-**Field Name**: Dataset Identifier  
-**Description**: The TDIS unique identifier for the associated dataset.  
+**Field Name**: Collection Identifier  
+**Description**: The TDIS unique identifier for the associated collection.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
@@ -974,20 +1075,36 @@ Each metadata field below is defined with the following elements:
 **Format**: Date: ISO 8601  
 **Controlled Terms URL**: None  
 
+**Field Name**: Date Metadata Updated  
+**Description**: Date the metadata record was last updated. Must conform to the ISO 8601 standard.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Date: ISO 8601  
+**Controlled Terms URL**: None  
+
+**Field Name**: Date Submitted  
+**Description**: Date the digital object or metadata record was submitted to TDIS. Must conform to the ISO 8601 standard.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Date: ISO 8601  
+**Controlled Terms URL**: None  
+
+**Field Name**: Identifier  
+**Description**: The TDIS unique identifier for the digital object.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: TDIS Identifier: UUID  
+**Controlled Terms URL**: None  
+
 **Field Name**: License  
 **Description**: License associated with the digital object.  
 **Use**: Optional  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Text  
-**Controlled Terms URL**: None  
-
-**Field Name**: Metadata Date  
-**Description**: Date the metadata record was last updated. Must conform to the ISO 8601 standard.  
-**Use**: Required  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Date: ISO 8601  
 **Controlled Terms URL**: None  
 
 **Field Name**: Update Frequency  
@@ -1033,7 +1150,7 @@ Each metadata field below is defined with the following elements:
 
 **Field Name**: Contact Name  
 **Description**: Name of a person who is a responsible point of contact.  
-**Use**: Required for Dataset, Optional for Artifact, Layer, and Model.  
+**Use**: Required for Collection, Optional for Artifact, Layer, and Model  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
@@ -1081,6 +1198,22 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Discovery
+**Field Name**: Boundary Type  
+**Description**: The type of geospatial boundary associated with the digital object.   
+**Use**: Optional  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/boundary_type_terms.csv  
+
+**Field Name**: Boundary Unit Identifier  
+**Description**: The unique identifier for a geospatial boundary unit of a particular type, such as a name or code.  
+**Use**: Conditionally Required  
+**Use Condition**: Boundary Type  
+**Accepts Multiple Values**: Yes  
+**Format**: TBD  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/boundary_type_terms.csv  
+
 **Field Name**: Creator  
 **Description**: The name of a person or organization who should be cited as contributing to the initial creation of the digital object. Also referred to as an "author" or "contributor".  
 **Use**: Recommended  
@@ -1129,17 +1262,25 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/model_type_terms.csv  
 
+**Field Name**: Purpose  
+**Description**: A description of the purpose for the creation of this digital object and/or the expected use.  
+**Use**: Optional  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
 **Field Name**: Software Name  
-**Description**: The name of the software used.  
-**Use**: Required  
+**Description**: The name of the software used to create or work with the digital object.  
+**Use**: Required for Model, Optional for Artifact, Layer  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/software_name_terms.csv  
 
 **Field Name**: Software Version  
-**Description**: The version of the software used.  
-**Use**: Required  
+**Description**: The version of the software used to create or work with the digital object.  
+**Use**: Required for Model, Optional for Artifact, Layer  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Numeric  
@@ -1173,7 +1314,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Reuse
-**Field Name**: Input Identifier  
+**Field Name**: Input File  
 **Description**: The TDIS unique identifier for an Artifact or Layer serving as input.  
 **Use**: Optional  
 **Use Condition**: None  
@@ -1181,10 +1322,11 @@ Each metadata field below is defined with the following elements:
 **Format**: TDIS Identifier: UUID  
 **Controlled Terms URL**: None  
 
-**Field Name**: Output Identifier  
+**Field Name**: Output File  
 **Description**: The TDIS unique identifier for an Artifact or Layer serving as output.  
 **Use**: Optional  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: TDIS Identifier: UUID  
 **Controlled Terms URL**: None  
+

@@ -1,4 +1,0 @@
-,status,metadata_level,metadata_group,display_name,definition,example,use,use_condition,repeatable,validation,published_terms
-8,Public,Model Configuration,Administrative,Version,Version number of the digital object.,TBD,Optional,None,No,TBD,None
-82,Public,Model Configuration,Reuse,Input Identifier,The TDIS unique identifier for an Artifact or Layer serving as input.,TBD,Optional,None,Yes,TDIS Identifier: UUID,None
-83,Public,Model Configuration,Reuse,Output Identifier,The TDIS unique identifier for an Artifact or Layer serving as output.,TBD,Optional,None,Yes,TDIS Identifier: UUID,None
