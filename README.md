@@ -1,8 +1,9 @@
 # TDIS Metadata and Data Assessment
-This repository contains public documentation of the TDIS metadata schema under ongoing development.
+This repository contains public documentation of the TDIS metadata schema under ongoing development.  
+
 **Please note**: field definitions will become more rigorous over time, and TDIS controlled terms are expected to expand as lists or hierarchies of valid terms.   
 
-This repository also contains working data quality assessment documentation undergoing development. TDIS data quality standards will be established based on this documentation. Feedback from the community is encouraged to refine expectations.
+This repository also contains working data assessment documentation undergoing development. TDIS data standards will be established based on this documentation. Feedback from the community is encouraged to refine expectations.
 
 ## Metadata Organization
 Within the current TDIS model, "collections" contain "artifacts", "data layers", and "models." 
@@ -28,10 +29,10 @@ Model configurations represent a unique way of running a model, exposing concret
 
 For a human-readable description of metadata fields, see: [tdis_metadata_field_documentation.md](https://github.com/TexasDIS/metadata/blob/main/tdis_metadata_field_documentation.md)
 
-For CSV files containing metadata field definitions according to level/tier, see: [fields_by_level](https://github.com/TexasDIS/metadata/tree/main/fields_by_level)
+For CSV files containing metadata field definitions according to level, see: [fields_by_level](https://github.com/TexasDIS/metadata/tree/main/fields_by_level)
 
 For CSV files containing controlled terms for particular metadata fields, see: [controlled_terms](https://github.com/TexasDIS/metadata/tree/main/controlled_terms)
 
 For examples and templates showing use of TDIS metadata fields, see: [examples_and_templates](https://github.com/TexasDIS/metadata/tree/main/examples_and_templates)
 
-For documentation regarding data quality assessment, see: [data_assessment_indices](https://github.com/TexasDIS/metadata/tree/main/data_assessment_indices)
+For documentation regarding data assessment, see: [data_assessment_indices](https://github.com/TexasDIS/metadata/tree/main/data_assessment_indices)
