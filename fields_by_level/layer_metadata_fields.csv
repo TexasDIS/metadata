@@ -4,7 +4,7 @@
 0,Core,Layer,Access,Distributor or Publisher,"The organization sharing, publishing, or otherwise responsible for providing access to the digital object.",US Geological Survey,Conditionally Required,Distribution URL,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx
 2,Core,Layer,Access,Service Endpoint Type,The type of service endpoint used for distribution.,TBD,Conditionally Required,Service Endpoint URL,No,Controlled Terms,TBD
 59,Core,Layer,Administrative,Collection Identifier,The TDIS unique identifier for the associated collection.,TBD,Required,None,No,TDIS Identifier: UUID,None
-8,Core,Layer,Administrative,Date Created,Date the digital object was originally created. Must conform to the ISO 8601 standard.,TBD,Recommended,None,No,Date: ISO 8601,None
+8,Core,Layer,Administrative,Creation Date,Date the digital object was originally created. Must conform to the ISO 8601 standard.,TBD,Recommended,None,No,Date: ISO 8601,None
 4,Core,Layer,Administrative,Date Last Updated,The date the digital object was last updated. Must conform to the ISO 8601 standard.,2021-11-10,Required,None,No,Date: ISO 8601,None
 12,Core,Layer,Administrative,Date Metadata Updated,Date the metadata record was last updated. Must conform to the ISO 8601 standard.,TBD,Required,None,No,Date: ISO 8601,None
 9,Core,Layer,Administrative,Date Submitted,Date the digital object or metadata record was submitted to TDIS. Must conform to the ISO 8601 standard.,TBD,Required,None,No,Date: ISO 8601,None
