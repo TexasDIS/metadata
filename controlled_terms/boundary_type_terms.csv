@@ -1,34 +1,37 @@
-term,unit_identifier
-State Boundary,FIPS code
-National Watershed Boundary Hydrologic Unit (HU),Hydrologic Unit Code (HUC)
-General Land Office Flood Study Region,"Region Identifier: ""East"",""Central"",""West"",""Lower Rio Grande Valley"""
-Texas Flood Planning Region,Region Identifier: 01–14
-Texas Regional Water Planning Groups,Region Identifier: A–P
-County,FIPS code
-Texas River Authority Statutory Boundary,Name
-Council of Governments (CoG),Name
-Municipality/City limit/Corporate limit,TBD
-Extraterritorial Jurisdiction (ETJ),TBD
-Texas State Board of Education District,TBD
-Texas Education Service Center (ESC) Region,Region Identifier: 1–20
-Texas Department of Public Safety (DPS) Region,TBD
-Federal Emegency Management Agency (FEMA) Region,TBD
-Congressional District,TBD
-House and Senate District,TBD
-TxDOT Urbanized Area,TBD
-Texas Metropolitan Planning Organization,TBD
-State Agency Regional Boundaries,TBD
-US Census Tract,TBD
-US Census Block Group,TBD
-US Census Block,TBD
-Land Parcel,TBD
-Subdivision,TBD
-Zoning,TBD
-US Postal Zip Code,TBD
-Texas State Park,TBD
-Texas Groundwater Conservation District,TBD
-Common Land Unit (CLU),TBD
-River or Coastal Basin,TBD
-Watershed,TBD
-Aquifier,TBD
-Ecoregion,TBD
+term,unit_identifier,distributor,url,identified_by
+State Boundary,FIPS code,,,State of Texas Hazard Mitigation Plan
+National Watershed Boundary Hydrologic Unit (HU),Hydrologic Unit Code (HUC),United States Geological Service (USGS) National Geospatial Program (NGP),https://www.usgs.gov/core-science-systems/ngp/national-hydrography/access-national-hydrography-products,State of Texas Hazard Mitigation Plan
+General Land Office Flood Study Region,"Region Identifier: ""East"",""Central"",""West"",""Lower Rio Grande Valley""",General Land Office (GLO),,State of Texas Hazard Mitigation Plan
+Texas Flood Planning Region,Region Identifier: 01–14,Texas Water Development Board (TWDB),https://www.twdb.texas.gov/flood/planning/regions/index.asp,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+Texas Regional Water Planning Groups,Region Identifier: A–P,Texas Water Development Board (TWDB),https://www.twdb.texas.gov/waterplanning/rwp/regions/index.asp,https://glofs.maps.arcgis.com/apps/webappviewer/index.html?id=04aa496a5f9f42eaafc8c199eaf5649f
+County,FIPS code,Texas Department of Transportation (TXDOT),https://gis-txdot.opendata.arcgis.com/datasets/texas-county-boundaries-detailed,"Data Collection Plan (West Region): Flood Studies-Combined River Basins (Version 1.0 2020); CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+Texas River Authority Statutory Boundary,Name,Texas Water Development Board (TWDB),http://www.twdb.texas.gov/mapping/gisdata.asp,State of Texas Hazard Mitigation Plan
+Council of Governments (CoG),Name,Texas Department of Transportation (TXDOT); TNRIS,https://gis-txdot.opendata.arcgis.com/datasets/texas-councils-of-governments,"Data Collection Plan (West Region): Flood Studies-Combined River Basins (Version 1.0 2020); CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+Municipality/City limit/Corporate limit,TBD,Texas Department of Transportation (TXDOT); TNRIS,https://services.arcgis.com/KTcxiTD9dsQw4r7Z/arcgis/rest/services/TxDOT_City_Boundaries/FeatureServer,"Data Collection Plan (West Region): Flood Studies-Combined River Basins (Version 1.0 2020); CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+Extraterritorial Jurisdiction (ETJ),TBD,City-specific,,Data Collection Plan (West Region): Flood Studies-Combined River Basins (Version 1.0 2020)
+Texas State Board of Education District,TBD,,,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+Texas Education Service Center (ESC) Region,Region Identifier: 1–20,Texas Education Agency (TEA),https://tea.texas.gov/about-tea/other-services/education-service-centers,
+Texas Department of Public Safety (DPS) Region,TBD,Texas Department of Public Safety (DPS),,State of Texas Hazard Mitigation Plan
+Federal Emegency Management Agency (FEMA) Region,TBD,TNRIS; FEMA,,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+Congressional District,TBD,Texas Department of Transportation (TXDOT); TNRIS,,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+House District,TBD,Texas Department of Transportation (TXDOT); TNRIS,,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+Senate District,,,,
+TxDOT Urbanized Area,TBD,Texas Department of Transportation (TXDOT),,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+Texas Metropolitan Planning Organization,TBD,,,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+State Agency Regional Boundaries,TBD,Texas Emergency GIS Response Team; TNRIS,https://data.tnris.org/collection/aa29e3f4-ee98-40f1-972a-25bb76c21d77,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+US Census Tract,TBD,,,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+US Census Block Group,TBD,,,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+US Census Block,TBD,,,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+Land Parcel,TBD,,,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+Subdivision,TBD,,,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+Zoning,TBD,,,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+US Postal Zip Code,TBD,,,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+Texas State Park,TBD,,,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+Groundwater Conservation District,TBD,,,"CDR Data Management Plan: Data Survey and System Design. Survey of Data for Response, Recovery and Mitigation."
+Common Land Unit (CLU),TBD,USDA Farm Services Agency (FSA),,
+River or Coastal Basin,TBD,,,State of Texas Hazard Mitigation Plan
+Watershed,TBD,,,State of Texas Hazard Mitigation Plan
+Aquifier,TBD,,,State of Texas Hazard Mitigation Plan
+Ecoregion,TBD,,,State of Texas Hazard Mitigation Plan
+Drainage District,Named districts within each county,,,
+Municipal Utility District (MUD),,,,

@@ -33,6 +33,6 @@ Code,R,Artifact
 Code,JavaScript,Artifact
 Code,,Artifact
 NetCDF,,Layer;Artifact
-Database ,GDB,Dataset
-Database ,,Dataset
+Database ,GDB,Collection
+Database ,,Collection
 Other,,Layer;Artifact

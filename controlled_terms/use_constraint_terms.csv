@@ -1,7 +1,6 @@
-term
-Public
-Restricted – Can share with partner agencies only
-Restricted - Display on Web
-Restricted - Requires DUA
-Restricted - No Display on Web
-Other
+term,
+Public,Data are public domain.
+Limited,Data usable by public under designated License or Terms of Use.
+Restricted_Low,Complete data usable by researchers and/or partners for vetted research purposes. Limited data more broadly.
+Restricted_Medium,Complete data usable only with Data Use Agreement. Limited data more broadly.
+Restricted_High,Data usable only with Data Use Agreement.
