@@ -1,5 +1,5 @@
 # TDIS Metadata Documentation
-*Last revised: 2022-08-11*
+*Last revised: 2022-08-29*
 
 ## Metadata Organization
 Within the current TDIS model, "collections" contain "artifacts", "data layers", and "models." 
@@ -31,6 +31,16 @@ Each metadata field below is defined with the following elements:
 - **Accepts Multiple Values**: "Yes" indicating that multiple values can be added to the metadata field, or "No".
 - **Format**: Indication of the type of value the field takes, this will be used for validation.
 - **Controlled Terms URL**: A link to published terms that are valid.
+
+## 
+### 
+**Field Name**: Scale  
+**Description**: The scale of the dataset   
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**:   
 
 ## Artifact
 ### Access
@@ -156,6 +166,14 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
 
+**Field Name**: Contact Department  
+**Description**: Dept under the Contact Affiliation  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Affiliation  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**:   
+
 **Field Name**: Contact Email  
 **Description**: Email for the responsible point of contact.  
 **Use**: Conditionally Required  
@@ -272,7 +290,7 @@ Each metadata field below is defined with the following elements:
 
 **Field Name**: Keyword Term  
 **Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
-**Use**: Conditionally Required  
+**Use**: Recommended  
 **Use Condition**: Keyword Vocabulary  
 **Accepts Multiple Values**: Yes  
 **Format**: Array:Text  
@@ -402,6 +420,14 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
 
+**Field Name**: Contact Department  
+**Description**: Dept under the Contact Affiliation  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Affiliation  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**:   
+
 **Field Name**: Contact Email  
 **Description**: Email for the responsible point of contact.  
 **Use**: Conditionally Required  
@@ -462,7 +488,7 @@ Each metadata field below is defined with the following elements:
 
 **Field Name**: Keyword Term  
 **Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
-**Use**: Conditionally Required  
+**Use**: Recommended  
 **Use Condition**: Keyword Vocabulary  
 **Accepts Multiple Values**: Yes  
 **Format**: Array:Text  
@@ -661,6 +687,14 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
 
+**Field Name**: Contact Department  
+**Description**: Dept under the Contact Affiliation  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Affiliation  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**:   
+
 **Field Name**: Contact Email  
 **Description**: Email for the responsible point of contact.  
 **Use**: Conditionally Required  
@@ -777,7 +811,7 @@ Each metadata field below is defined with the following elements:
 
 **Field Name**: Keyword Term  
 **Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
-**Use**: Conditionally Required  
+**Use**: Recommended  
 **Use Condition**: Keyword Vocabulary  
 **Accepts Multiple Values**: Yes  
 **Format**: Array:Text  
@@ -1140,6 +1174,14 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
 
+**Field Name**: Contact Department  
+**Description**: Dept under the Contact Affiliation  
+**Use**: Conditionally Required  
+**Use Condition**: Contact Affiliation  
+**Accepts Multiple Values**: Yes  
+**Format**: Text  
+**Controlled Terms URL**:   
+
 **Field Name**: Contact Email  
 **Description**: Email for the responsible point of contact.  
 **Use**: Conditionally Required  
@@ -1240,7 +1282,7 @@ Each metadata field below is defined with the following elements:
 
 **Field Name**: Keyword Term  
 **Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
-**Use**: Conditionally Required  
+**Use**: Recommended  
 **Use Condition**: Keyword Vocabulary  
 **Accepts Multiple Values**: Yes  
 **Format**: Array:Text  
