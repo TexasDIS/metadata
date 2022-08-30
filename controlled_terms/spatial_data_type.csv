@@ -1,0 +1,13 @@
+term,example
+vector - point,"gaging station, wells"
+vector - line,"roads, rivers"
+vector - polygon,"counties, cities, building footprints"
+vector - multipoint,multiple point features represented as a single entitiy
+vector - multipatch,represents objects in a 3D space like buildings
+raster - imagery,"aerial imagery, LandSat"
+raster - elevation,DEM
+raster - discreet,"land cover, vegetation"
+raster - continuous,precipitation
+raster - other,other type of raster not represented above
+point cloud,lidar
+tin,slope
