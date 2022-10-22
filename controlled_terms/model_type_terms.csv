@@ -1,7 +1,6 @@
-term,associated_software_example,description
+term,associated_software_example,
 Hydraulic,HEC-RAS,
 Hydrologic,HEC-HMS,
-2D,,
 Stormdrain,,
 Coastal,Delft3D,
 Coupled Hydraulic Hydrodynamic,,

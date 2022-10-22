@@ -1,0 +1,23 @@
+term,type,wkid
+NAVD 88,vertical,
+D_Clarke_1866,geographic,6008
+D_GRS_1980,geographic,6019
+D_NAD_1983_2011,geographic,1116
+D_NAD_1983_CORS96,geographic,1133
+North_American_Datum_of_1983_(CSRS96),geographic,1192
+North_American_Datum_of_1983_(CSRS)_version_2,geographic,1193
+North_American_Datum_of_1983_(CSRS)_version_3,geographic,1194
+North_American_Datum_of_1983_(CSRS)_version_4,geographic,1195
+North_American_Datum_of_1983_(CSRS)_version_5,geographic,1196
+North_American_Datum_of_1983_(CSRS)_version_6,geographic,1197
+North_American_Datum_of_1983_(CSRS)_version_7,geographic,1198
+D_North_American_1927,geographic,6267
+D_North_American_1983,geographic,6269
+D_North_American_1983_CSRS,geographic,6140
+D_North_American_1983_HARN,geographic,6152
+World_Geodetic_System_1984_(G1150),geographic,1154
+World_Geodetic_System_1984_(G1674),geographic,1155
+World_Geodetic_System_1984_(G1762),geographic,1156
+World_Geodetic_System_1984_(G730),geographic,1152
+World_Geodetic_System_1984_(G873),geographic,1153
+World_Geodetic_System_1984_(Transit),geographic,1166
