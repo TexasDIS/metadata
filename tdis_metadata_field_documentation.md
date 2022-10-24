@@ -1,5 +1,5 @@
 # TDIS Metadata Documentation
-*Last revised: 2022-08-29*
+*Last revised: 2022-10-24*
 
 ## Metadata Organization
 Within the current TDIS model, "collections" contain "artifacts", "data layers", and "models." 
@@ -31,16 +31,6 @@ Each metadata field below is defined with the following elements:
 - **Accepts Multiple Values**: "Yes" indicating that multiple values can be added to the metadata field, or "No".
 - **Format**: Indication of the type of value the field takes, this will be used for validation.
 - **Controlled Terms URL**: A link to published terms that are valid.
-
-## 
-### 
-**Field Name**: Scale  
-**Description**: The scale of the dataset   
-**Use**: Recommended  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Controlled Terms  
-**Controlled Terms URL**:   
 
 ## Artifact
 ### Access
@@ -74,7 +64,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: Service Endpoint URL  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: TBD  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/service_endpoint_types.csv  
 
 ### Administrative
 **Field Name**: Collection Identifier  
@@ -154,7 +144,7 @@ Each metadata field below is defined with the following elements:
 **Use**: Optional  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
-**Format**: TBD  
+**Format**: None  
 **Controlled Terms URL**: None  
 
 ### Contact Information
@@ -245,7 +235,7 @@ Each metadata field below is defined with the following elements:
 **Use**: Conditionally Required  
 **Use Condition**: Boundary Type  
 **Accepts Multiple Values**: Yes  
-**Format**: TBD  
+**Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/boundary_type_terms.csv  
 
 **Field Name**: Classification System  
@@ -280,17 +270,9 @@ Each metadata field below is defined with the following elements:
 **Format**: Text  
 **Controlled Terms URL**: None  
 
-**Field Name**: Digital Object Type  
-**Description**: The type of content in the digital object, and optionally format. Used when a file or files are uploaded to TDIS.  
-**Use**: Recommended  
-**Use Condition**: None  
-**Accepts Multiple Values**: Yes  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv  
-
 **Field Name**: Keyword Term  
 **Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
-**Use**: Recommended  
+**Use**: Required  
 **Use Condition**: Keyword Vocabulary  
 **Accepts Multiple Values**: Yes  
 **Format**: Array:Text  
@@ -342,22 +324,6 @@ Each metadata field below is defined with the following elements:
 **Use**: Recommended  
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
-**Format**: Text  
-**Controlled Terms URL**: None  
-
-**Field Name**: Collection Method  
-**Description**: The procedure, technique, or mode of inquiry used to attain data. Also referred to as "Data Capture Method".  
-**Use**: Recommended  
-**Use Condition**: None  
-**Accepts Multiple Values**: Yes  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv  
-
-**Field Name**: Collection Method Description  
-**Description**: Description of the data collection method.  
-**Use**: Conditionally Required  
-**Use Condition**: Collection Method  
-**Accepts Multiple Values**: No  
 **Format**: Text  
 **Controlled Terms URL**: None  
 
@@ -461,6 +427,14 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/contact_role_terms.csv  
 
 ### Coverage
+**Field Name**: Scale  
+**Description**: The scale of the dataset   
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/classification_scale_terms.csv  
+
 **Field Name**: Spatial Extent (Decimal Degrees)  
 **Description**: Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.  
 **Use**: Recommended  
@@ -478,17 +452,9 @@ Each metadata field below is defined with the following elements:
 **Format**: Text  
 **Controlled Terms URL**: None  
 
-**Field Name**: Digital Object Type  
-**Description**: The type of content in the digital object, and optionally format. Used when a file or files are uploaded to TDIS.  
-**Use**: Recommended  
-**Use Condition**: None  
-**Accepts Multiple Values**: Yes  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv  
-
 **Field Name**: Keyword Term  
 **Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
-**Use**: Recommended  
+**Use**: Required  
 **Use Condition**: Keyword Vocabulary  
 **Accepts Multiple Values**: Yes  
 **Format**: Array:Text  
@@ -538,22 +504,6 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Coverage
-**Field Name**: Area (Square Meters)  
-**Description**: Numeric value for the area of the feature in square meters.  
-**Use**: Conditionally Required  
-**Use Condition**: Spatial Extent: None  
-**Accepts Multiple Values**: No  
-**Format**: Numeric  
-**Controlled Terms URL**: None  
-
-**Field Name**: Length (Meters)  
-**Description**: Numeric value for the length dimension of the feature in meters.  
-**Use**: Conditionally Recommended  
-**Use Condition**: Spatial Extent: None  
-**Accepts Multiple Values**: No  
-**Format**: Numeric  
-**Controlled Terms URL**: None  
-
 **Field Name**: Spatial Extent (Decimal Degrees)  
 **Description**: Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.  
 **Use**: Recommended  
@@ -563,21 +513,61 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Reuse
+**Field Name**: Collection Method  
+**Description**: The procedure, technique, or mode of inquiry used to attain data. Also referred to as "Data Capture Method".  
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv  
+
+**Field Name**: Collection Method Description  
+**Description**: Description of the data collection method.  
+**Use**: Conditionally Required  
+**Use Condition**: Collection Method  
+**Accepts Multiple Values**: No  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
+**Field Name**: Horizontal Accuracy (Meters)  
+**Description**: Numeric value for the accuracy in meters.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Numeric  
+**Controlled Terms URL**: None  
+
 **Field Name**: Horizontal Accuracy Method  
 **Description**: Method for determining accuracy of the data.  
 **Use**: Required  
 **Use Condition**: None  
-**Accepts Multiple Values**: TBD  
+**Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv  
+
+**Field Name**: Vertical Accuracy (Meters)  
+**Description**: Numeric value for the accuracy in meters.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Numeric  
+**Controlled Terms URL**: None  
 
 **Field Name**: Vertical Accuracy Method  
 **Description**: Method for determining accuracy of the data.  
 **Use**: Required  
 **Use Condition**: None  
-**Accepts Multiple Values**: TBD  
+**Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv  
+
+**Field Name**: Vertical Datum  
+**Description**: A vertical datum is a surface of zero elevation to which heights of various points are referenced.   
+**Use**: Conditionally Required  
+**Use Condition**: Vertical Cordinate System  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/datums.csv  
 
 ## Layer
 ### Access
@@ -611,7 +601,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: Service Endpoint URL  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: TBD  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/service_endpoint_types.csv  
 
 ### Administrative
 **Field Name**: Collection Identifier  
@@ -736,6 +726,14 @@ Each metadata field below is defined with the following elements:
 **Format**: Text or Controlled Terms  
 **Controlled Terms URL**: http://www.geonames.org  
 
+**Field Name**: Scale  
+**Description**: The scale of the dataset   
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/classification_scale_terms.csv  
+
 **Field Name**: Spatial Extent (Decimal Degrees)  
 **Description**: Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.  
 **Use**: Recommended  
@@ -766,7 +764,7 @@ Each metadata field below is defined with the following elements:
 **Use**: Conditionally Required  
 **Use Condition**: Boundary Type  
 **Accepts Multiple Values**: Yes  
-**Format**: TBD  
+**Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/boundary_type_terms.csv  
 
 **Field Name**: Classification System  
@@ -801,7 +799,7 @@ Each metadata field below is defined with the following elements:
 **Format**: Text  
 **Controlled Terms URL**: None  
 
-**Field Name**: Digital Object Type  
+**Field Name**: File Format  
 **Description**: The type of content in the digital object, and optionally format. Used when a file or files are uploaded to TDIS.  
 **Use**: Recommended  
 **Use Condition**: None  
@@ -811,7 +809,7 @@ Each metadata field below is defined with the following elements:
 
 **Field Name**: Keyword Term  
 **Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
-**Use**: Recommended  
+**Use**: Required  
 **Use Condition**: Keyword Vocabulary  
 **Accepts Multiple Values**: Yes  
 **Format**: Array:Text  
@@ -880,7 +878,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/geo_attribute_value_type_terms.csv  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/attribute_domain_type_terms.csv  
 
 **Field Name**: Attribute Name  
 **Description**: Name of the attribute (field, variable) within the attribute table for this layer.  
@@ -914,22 +912,6 @@ Each metadata field below is defined with the following elements:
 **Format**: Text  
 **Controlled Terms URL**: None  
 
-**Field Name**: Collection Method  
-**Description**: The procedure, technique, or mode of inquiry used to attain data. Also referred to as "Data Capture Method".  
-**Use**: Recommended  
-**Use Condition**: None  
-**Accepts Multiple Values**: Yes  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv  
-
-**Field Name**: Collection Method Description  
-**Description**: Description of the data collection method.  
-**Use**: Conditionally Required  
-**Use Condition**: Collection Method  
-**Accepts Multiple Values**: No  
-**Format**: Text  
-**Controlled Terms URL**: None  
-
 **Field Name**: Domain Value  
 **Description**: Valid value for the attribute.  
 **Use**: Conditionally Required  
@@ -946,37 +928,21 @@ Each metadata field below is defined with the following elements:
 **Format**: Text  
 **Controlled Terms URL**: None  
 
-**Field Name**: Horizontal Accuracy (Meters)  
-**Description**: Numeric value for the accuracy in meters.  
-**Use**: Required  
-**Use Condition**: None  
-**Accepts Multiple Values**: TBD  
-**Format**: Numeric  
-**Controlled Terms URL**: None  
-
-**Field Name**: Horizontal Accuracy Method  
-**Description**: Method for determining accuracy of the data.  
-**Use**: Required  
-**Use Condition**: None  
-**Accepts Multiple Values**: TBD  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv  
-
 **Field Name**: Horizontal Coordinate System  
-**Description**: TBD  
+**Description**: A projected coordinate system is a planar system that uses two-dimensional coordinates and linear distance measurements as units. A projected coordinate system is based on a geographic coordinate system and a map projection.  
 **Use**: Required  
-**Use Condition**: None  
+**Use Condition**: Horizontal Coordinate System  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://spatialreference.org/ref/  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/coordinate_systems.csv  
 
 **Field Name**: Horizontal Datum  
-**Description**: A horizontal datum is a specified coordinate system for a collection of positions on the surface of the earth.   
-**Use**: TBD  
+**Description**: A horizontal datum is a specified coordinate system for a collection of positions on the surface of the earth. Horizontal datums define the geometric relationship between a coordinate system grid and the Earth's surface.  
+**Use**: Required  
 **Use Condition**: TBD  
 **Accepts Multiple Values**: TBD  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://www.ngs.noaa.gov/datums/horizontal/  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/datums.csv  
 
 **Field Name**: Processing Step Date  
 **Description**: The date when a particular processing step was completed. Must conform to the ISO 8601 standard.  
@@ -1018,37 +984,13 @@ Each metadata field below is defined with the following elements:
 **Format**: Text  
 **Controlled Terms URL**: None  
 
-**Field Name**: Vertical Accuracy (Meters)  
-**Description**: Numeric value for the accuracy in meters.  
-**Use**: Required  
-**Use Condition**: None  
-**Accepts Multiple Values**: TBD  
-**Format**: Numeric  
-**Controlled Terms URL**: None  
-
-**Field Name**: Vertical Accuracy Method  
-**Description**: Method for determining accuracy of the data.  
-**Use**: Required  
-**Use Condition**: None  
-**Accepts Multiple Values**: TBD  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/collection_method_terms.csv  
-
 **Field Name**: Vertical Coordinate System  
-**Description**: TBD  
+**Description**: A vertical coordinate system defines the origin for height or depth values. They are used as a reference for specifying heights.  
 **Use**: Required  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://spatialreference.org/ref/  
-
-**Field Name**: Vertical Datum  
-**Description**: A vertical datum is a surface of zero elevation to which heights of various points are referenced.   
-**Use**: TBD  
-**Use Condition**: TBD  
-**Accepts Multiple Values**: TBD  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: https://www.ngs.noaa.gov/datums/vertical/  
+**Controlled Terms URL**: \https://github.com/TexasDIS/metadata/blob/main/controlled_terms/coordinate_systems.csv  
 
 ## Model
 ### Access
@@ -1082,7 +1024,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: Service Endpoint URL  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: TBD  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/service_endpoint_types.csv  
 
 ### Administrative
 **Field Name**: Collection Identifier  
@@ -1162,7 +1104,7 @@ Each metadata field below is defined with the following elements:
 **Use**: Optional  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
-**Format**: TBD  
+**Format**: None  
 **Controlled Terms URL**: None  
 
 ### Contact Information
@@ -1223,6 +1165,14 @@ Each metadata field below is defined with the following elements:
 **Format**: Text or Controlled Terms  
 **Controlled Terms URL**: http://www.geonames.org  
 
+**Field Name**: Scale  
+**Description**: The scale of the dataset   
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/classification_scale_terms.csv  
+
 **Field Name**: Spatial Extent (Decimal Degrees)  
 **Description**: Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.  
 **Use**: Recommended  
@@ -1240,6 +1190,14 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Discovery
+**Field Name**:   
+**Description**:   
+**Use**:   
+**Use Condition**:   
+**Accepts Multiple Values**:   
+**Format**:   
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/model_dimension_terms.csv  
+
 **Field Name**: Boundary Type  
 **Description**: The type of geospatial boundary associated with the digital object.   
 **Use**: Optional  
@@ -1253,7 +1211,7 @@ Each metadata field below is defined with the following elements:
 **Use**: Conditionally Required  
 **Use Condition**: Boundary Type  
 **Accepts Multiple Values**: Yes  
-**Format**: TBD  
+**Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/boundary_type_terms.csv  
 
 **Field Name**: Creator  
@@ -1272,17 +1230,9 @@ Each metadata field below is defined with the following elements:
 **Format**: Text  
 **Controlled Terms URL**: None  
 
-**Field Name**: Digital Object Type  
-**Description**: The type of content in the digital object, and optionally format. Used when a file or files are uploaded to TDIS.  
-**Use**: Recommended  
-**Use Condition**: None  
-**Accepts Multiple Values**: Yes  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv  
-
 **Field Name**: Keyword Term  
 **Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
-**Use**: Recommended  
+**Use**: Required  
 **Use Condition**: Keyword Vocabulary  
 **Accepts Multiple Values**: Yes  
 **Format**: Array:Text  
@@ -1352,7 +1302,7 @@ Each metadata field below is defined with the following elements:
 **Use**: Optional  
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
-**Format**: TBD  
+**Format**: None  
 **Controlled Terms URL**: None  
 
 ### Reuse
@@ -1371,4 +1321,14 @@ Each metadata field below is defined with the following elements:
 **Accepts Multiple Values**: Yes  
 **Format**: TDIS Identifier: UUID  
 **Controlled Terms URL**: None  
+
+## Spatial Data Type
+### Discovery
+**Field Name**: Spatial Data Type  
+**Description**: The type of spatial data  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_spatial_data_type.csv  
 
