@@ -1,5 +1,0 @@
-term,description
-local,data represents smaller area like cities
-regional,data represents larger regions within a country or state
-national,data represents an entire country
-global,data is world wide
