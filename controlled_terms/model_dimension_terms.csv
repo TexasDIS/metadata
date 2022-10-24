@@ -1,4 +1,5 @@
 term,desciption
-1D,1 dimensional data
-2D,2 dimensional data
-3D,3 dimensional data
+1D,1 dimensional terrain
+2D,2 dimensional terrain
+1D/2D,semi-2D or combination terrain
+3D,3 dimensional terrain
