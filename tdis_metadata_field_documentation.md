@@ -1330,4 +1330,4 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_spatial_data_type.csv
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/spatial_data_type.csv
