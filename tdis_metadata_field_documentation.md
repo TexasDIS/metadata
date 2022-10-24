@@ -56,7 +56,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: Distribution URL  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.csv  
 
 **Field Name**: Service Endpoint Type  
 **Description**: The type of service endpoint used for distribution.  
@@ -154,7 +154,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.csv  
 
 **Field Name**: Contact Department  
 **Description**: Dept under the Contact Affiliation  
@@ -300,7 +300,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/software_name_terms.csv  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/software_terms.csv  
 
 **Field Name**: Software Version  
 **Description**: The version of the software used to create or work with the digital object.  
@@ -384,7 +384,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.csv  
 
 **Field Name**: Contact Department  
 **Description**: Dept under the Contact Affiliation  
@@ -433,7 +433,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/classification_scale_terms.csv  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/scale_range.csv  
 
 **Field Name**: Spatial Extent (Decimal Degrees)  
 **Description**: Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.  
@@ -593,7 +593,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: Distribution URL  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.csv  
 
 **Field Name**: Service Endpoint Type  
 **Description**: The type of service endpoint used for distribution.  
@@ -675,7 +675,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.csv  
 
 **Field Name**: Contact Department  
 **Description**: Dept under the Contact Affiliation  
@@ -732,7 +732,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/classification_scale_terms.csv  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/scale_range.csv  
 
 **Field Name**: Spatial Extent (Decimal Degrees)  
 **Description**: Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.  
@@ -805,7 +805,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/object_type_terms.csv  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/file_format.csv  
 
 **Field Name**: Keyword Term  
 **Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
@@ -837,7 +837,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/software_name_terms.csv  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/software_terms.csv  
 
 **Field Name**: Software Version  
 **Description**: The version of the software used to create or work with the digital object.  
@@ -990,7 +990,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: \https://github.com/TexasDIS/metadata/blob/main/controlled_terms/coordinate_systems.csv  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/coordinate_systems.csv  
 
 ## Model
 ### Access
@@ -1016,7 +1016,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: Distribution URL  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.csv  
 
 **Field Name**: Service Endpoint Type  
 **Description**: The type of service endpoint used for distribution.  
@@ -1114,7 +1114,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.xlsx  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization_terms.csv  
 
 **Field Name**: Contact Department  
 **Description**: Dept under the Contact Affiliation  
@@ -1171,7 +1171,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/classification_scale_terms.csv  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/scale_range.csv  
 
 **Field Name**: Spatial Extent (Decimal Degrees)  
 **Description**: Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.  
@@ -1190,12 +1190,12 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Discovery
-**Field Name**:   
-**Description**:   
-**Use**:   
-**Use Condition**:   
-**Accepts Multiple Values**:   
-**Format**:   
+**Field Name**: Model Dimension  
+**Description**: Dimensionality choice of a terrain model (1D, 2D, 3D, or combos) created prior to running hydro model computations.  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/model_dimension_terms.csv  
 
 **Field Name**: Boundary Type  
@@ -1268,7 +1268,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/software_name_terms.csv  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/software_terms.csv  
 
 **Field Name**: Software Version  
 **Description**: The version of the software used to create or work with the digital object.  
@@ -1330,5 +1330,4 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_spatial_data_type.csv  
-
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_spatial_data_type.csv
