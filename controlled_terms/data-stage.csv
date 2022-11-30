@@ -1,0 +1,4 @@
+score,description
+1,Data requires significant additional processing
+3,Data requires minimal additional processing
+5,Data has been fully processed and is ready to use
