@@ -1,5 +1,5 @@
 # TDIS Metadata Documentation
-*Last revised: 2022-10-24*
+*Last revised: 2022-11-30*
 
 ## Metadata Organization
 Within the current TDIS model, "collections" contain "artifacts", "data layers", and "models." 
@@ -205,14 +205,6 @@ Each metadata field below is defined with the following elements:
 **Format**: Text or Controlled Terms  
 **Controlled Terms URL**: http://www.geonames.org  
 
-**Field Name**: Spatial Extent (Decimal Degrees)  
-**Description**: Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.  
-**Use**: Recommended  
-**Use Condition**: None  
-**Accepts Multiple Values**: Yes  
-**Format**: Array: Decimal Degrees or Geometry: Polygon  
-**Controlled Terms URL**: None  
-
 **Field Name**: Time Period Covered  
 **Description**: Time period to which the data refer as a single date-time or an interval. Must conform to the ISO 8601 standard. This reflects the time period covered by the data, not the dates of coding or making documents machine-readable or the dates the data were collected. Also known as the "span" covered by the data, this may reflect the dates during which an event occured.  
 **Use**: Recommended  
@@ -222,6 +214,14 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Discovery
+**Field Name**: Accessibility  
+**Description**: How accessible is the data?  Is the data readily available online or must it be requested from the host?  Are there tools online to easily download the files? If it fully accessible as a web service?  
+**Use**: Strongly Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/accessibility.csv  
+
 **Field Name**: Boundary Type  
 **Description**: The type of geospatial boundary associated with the digital object.   
 **Use**: Optional  
@@ -254,6 +254,14 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/classification_system_and_terms.csv  
 
+**Field Name**: Completeness  
+**Description**: A assessment of the level of completeness of the dataset.   
+**Use**: Strongly Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/completeness.csv  
+
 **Field Name**: Creator  
 **Description**: The name of a person or organization who should be cited as contributing to the initial creation of the digital object. Also referred to as an "author" or "contributor".  
 **Use**: Recommended  
@@ -261,6 +269,14 @@ Each metadata field below is defined with the following elements:
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
 **Controlled Terms URL**: None  
+
+**Field Name**: Data Stage  
+**Description**: Is the data in a stage that can easily be used for disaster response? Does it require a significant amount of processing or is it ready to use?   
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/data_stage.csv  
 
 **Field Name**: Description   
 **Description**: An account of the digital object. The description may include an abstract, a table of contents, or a free-text account.  
@@ -271,7 +287,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Keyword Term  
-**Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
+**Description**: Subject matter keywords  
 **Use**: Required  
 **Use Condition**: Keyword Vocabulary  
 **Accepts Multiple Values**: Yes  
@@ -369,14 +385,6 @@ Each metadata field below is defined with the following elements:
 **Format**: TDIS Identifier: UUID  
 **Controlled Terms URL**: None  
 
-**Field Name**: License  
-**Description**: License associated with the digital object.  
-**Use**: Optional  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Text  
-**Controlled Terms URL**: None  
-
 ### Contact Information
 **Field Name**: Contact Affiliation  
 **Description**: Organizational affiliation for the responsible point of contact.  
@@ -444,6 +452,30 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Discovery
+**Field Name**: Accessibility  
+**Description**: How accessible is the data?  Is the data readily available online or must it be requested from the host?  Are there tools online to easily download the files? If it fully accessible as a web service?  
+**Use**: Strongly Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/accessibility.csv  
+
+**Field Name**: Completeness  
+**Description**: A assessment of the level of completeness of the dataset.   
+**Use**: Strongly Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/completeness.csv  
+
+**Field Name**: Data Stage  
+**Description**: Is the data in a stage that can easily be used for disaster response? Does it require a significant amount of processing or is it ready to use?   
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/data_stage.csv  
+
 **Field Name**: Description   
 **Description**: An account of the digital object. The description may include an abstract, a table of contents, or a free-text account.  
 **Use**: Required  
@@ -453,7 +485,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Keyword Term  
-**Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
+**Description**: Subject matter keywords  
 **Use**: Required  
 **Use Condition**: Keyword Vocabulary  
 **Accepts Multiple Values**: Yes  
@@ -652,6 +684,14 @@ Each metadata field below is defined with the following elements:
 **Format**: TDIS Identifier: UUID  
 **Controlled Terms URL**: None  
 
+**Field Name**: License  
+**Description**: License associated with the digital object.  
+**Use**: Optional  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Text  
+**Controlled Terms URL**: None  
+
 **Field Name**: Update Frequency  
 **Description**: How often the content is updated.  
 **Use**: Recommended  
@@ -751,6 +791,14 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Discovery
+**Field Name**: Accessibility  
+**Description**: How accessible is the data?  Is the data readily available online or must it be requested from the host?  Are there tools online to easily download the files? If it fully accessible as a web service?  
+**Use**: Strongly Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/accessibility.csv  
+
 **Field Name**: Boundary Type  
 **Description**: The type of geospatial boundary associated with the digital object.   
 **Use**: Optional  
@@ -783,6 +831,14 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/classification_system_and_terms.csv  
 
+**Field Name**: Completeness  
+**Description**: A assessment of the level of completeness of the dataset.   
+**Use**: Strongly Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/completeness.csv  
+
 **Field Name**: Creator  
 **Description**: The name of a person or organization who should be cited as contributing to the initial creation of the digital object. Also referred to as an "author" or "contributor".  
 **Use**: Recommended  
@@ -790,6 +846,14 @@ Each metadata field below is defined with the following elements:
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
 **Controlled Terms URL**: None  
+
+**Field Name**: Data Stage  
+**Description**: Is the data in a stage that can easily be used for disaster response? Does it require a significant amount of processing or is it ready to use?   
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/data_stage.csv  
 
 **Field Name**: Description   
 **Description**: An account of the digital object. The description may include an abstract, a table of contents, or a free-text account.  
@@ -808,7 +872,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/file_format.csv  
 
 **Field Name**: Keyword Term  
-**Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
+**Description**: Subject matter keywords  
 **Use**: Required  
 **Use Condition**: Keyword Vocabulary  
 **Accepts Multiple Values**: Yes  
@@ -846,6 +910,14 @@ Each metadata field below is defined with the following elements:
 **Accepts Multiple Values**: No  
 **Format**: Numeric  
 **Controlled Terms URL**: None  
+
+**Field Name**: Spatial Data Type  
+**Description**: The type of spatial data  
+**Use**: Required  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/spatial_data_type.csv  
 
 **Field Name**: Title  
 **Description**: A name given to the digital object.  
@@ -990,7 +1062,7 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/coordinate_systems.csv  
+**Controlled Terms URL**: \https://github.com/TexasDIS/metadata/blob/main/controlled_terms/coordinate_systems.csv  
 
 ## Model
 ### Access
@@ -1190,13 +1262,13 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 ### Discovery
-**Field Name**: Model Dimension  
-**Description**: Dimensionality choice of a terrain model (1D, 2D, 3D, or combos) created prior to running hydro model computations.  
-**Use**: Required  
+**Field Name**: Accessibility  
+**Description**: How accessible is the data?  Is the data readily available online or must it be requested from the host?  Are there tools online to easily download the files? If it fully accessible as a web service?  
+**Use**: Strongly Recommended  
 **Use Condition**: None  
-**Accepts Multiple Values**: Yes  
+**Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/model_dimension_terms.csv  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/accessibility.csv  
 
 **Field Name**: Boundary Type  
 **Description**: The type of geospatial boundary associated with the digital object.   
@@ -1214,6 +1286,14 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/boundary_type_terms.csv  
 
+**Field Name**: Completeness  
+**Description**: A assessment of the level of completeness of the dataset.   
+**Use**: Strongly Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/completeness.csv  
+
 **Field Name**: Creator  
 **Description**: The name of a person or organization who should be cited as contributing to the initial creation of the digital object. Also referred to as an "author" or "contributor".  
 **Use**: Recommended  
@@ -1221,6 +1301,14 @@ Each metadata field below is defined with the following elements:
 **Accepts Multiple Values**: Yes  
 **Format**: Text  
 **Controlled Terms URL**: None  
+
+**Field Name**: Data Stage  
+**Description**: Is the data in a stage that can easily be used for disaster response? Does it require a significant amount of processing or is it ready to use?   
+**Use**: Recommended  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/data_stage.csv  
 
 **Field Name**: Description   
 **Description**: An account of the digital object. The description may include an abstract, a table of contents, or a free-text account.  
@@ -1231,7 +1319,7 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 **Field Name**: Keyword Term  
-**Description**: Subject matter keywords from the vocabulary chosen in Keyword Vocabulary.  
+**Description**: Subject matter keywords  
 **Use**: Required  
 **Use Condition**: Keyword Vocabulary  
 **Accepts Multiple Values**: Yes  
@@ -1245,6 +1333,14 @@ Each metadata field below is defined with the following elements:
 **Accepts Multiple Values**: No  
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_vocabulary_terms.csv  
+
+**Field Name**: Model Dimension  
+**Description**: Dimensionality choice of a terrain model (1D, 2D, 3D, or combos) created prior to running hydro model computations.  
+**Use**: Required  
+**Use Condition**:   
+**Accepts Multiple Values**: Yes  
+**Format**:   
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/model_dimension_terms.csv  
 
 **Field Name**: Model Type  
 **Description**: The type of model.  
@@ -1322,12 +1418,3 @@ Each metadata field below is defined with the following elements:
 **Format**: TDIS Identifier: UUID  
 **Controlled Terms URL**: None  
 
-## Spatial Data Type
-### Discovery
-**Field Name**: Spatial Data Type  
-**Description**: The type of spatial data  
-**Use**: Required  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/spatial_data_type.csv
