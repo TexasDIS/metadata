@@ -10,7 +10,7 @@ global_attributes:
   classification_term: TBD
   codeset_name: High Water Mark Field Guide
   codeset_url: https://pubs.er.usgs.gov/publication/tm3A24 
-  completeness: 5 – mostly complete (see controlled vocabulary csv file reference)
+  completeness: 5, mostly complete (see controlled vocabulary csv file reference)
   contact_affiliation: University of Texas (see controlled vocabulary csv file reference)
   contact_dept: Center for Space Research
   contact_email: john.doe@gmail.com
