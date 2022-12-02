@@ -1,16 +1,16 @@
 global_attributes:
-  accessibility: 1 - Data access requires request to use at the location of data
+  accessibility: 4,Data are downloadable online with user interaction (see controlled vocabulary csv file reference)
   classification_sys: TBD
   classification_term: TBD
-  contact_affiliation: University of Texas
+  contact_affiliation: University of Texas (see controlled vocabulary csv file reference)
   contact_dept: Center for Space Research
   contact_email: john.doe@gmail.com
   contact_name: John Doe
   contact_phone: 111-222-3333
-  contact_role: Curator
+  contact_role: Curator (see controlled vocabulary csv file reference)
   creator_name: Jane Doe
   custody_chain: Data collection and creation of dataset performed by USGS. Additional reclass field added by UTCSR
-  data_stage: 1 - Data requires significant additional processing
+  data_stage: 3,Data requires minimal additional processing (see controlled vocabulary csv file reference)
   date_created: 2022-01-01
   date_last_updated: 2022-02-01
   date_metadata_updated: 2022-02-01
@@ -18,21 +18,21 @@ global_attributes:
   description: 5 year Flood Plan for Region 1
   distribution_method: Published on the USGS website
   distribution_url: https://waterdata.usgs.gov/tx/nwis/rt
-  distributor_publisher: USGS
-  file_format: PDF
+  distributor_publisher: USGS (see controlled vocabulary csv file reference)
+  file_format: PDF (see controlled vocabulary csv file reference)
   keyword_term: storm surges, drought
-  keyword_vocab: USGS
+  keyword_vocab: USGS (see controlled vocabulary csv file reference)
   license: list the reference to legal rights regarding use of data
   object_version: 5
-  placename: Texas
+  placename: Texas (see controlled vocabulary csv file reference)
   process_step_date: 2022-03-01
   process_step_descrip: Original data was collected and compiled by USGS staff
-  process_step_source: USGS
+  process_step_source: USGS (see controlled vocabulary csv file reference)
   purpose: For future flood forecasting, predicting severity of future floods, and delineating floodplain maps
-  service_endpoint_type: Feature layer service
-  software_name: ArcGIS Desktop
+  service_endpoint_type: REST (see controlled vocabulary csv file reference)
+  software_name: ArcGIS Desktop (see controlled vocabulary csv file reference)
   software_version: 10.2
   time_period_covered: USGS High Water Marks
   title: USGS High Water Marks
-  update_freq: Annually
-  use_constraint: Restricted
+  update_freq: Annually (see controlled vocabulary csv file reference)
+  use_constraint: Restricted (see controlled vocabulary csv file reference)
