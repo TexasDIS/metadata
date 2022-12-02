@@ -1,0 +1,57 @@
+global_attributes:
+  accessibility: 5,Data are accessible online via service endpoints (see controlled vocabulary csv file reference)
+  attribute_accuracy: Attributes are approximately 90% complete. Some fields have missing values. HWM types were evaluted with an automated comparison to the notes and description fields. A handful were reclassified in the Type_Reclass field. Note: many null values are null on purpose, for instance, not all water marks need additionl notes
+  attribute_descrip: Unique identification number for the site where the data was collected
+  attribute_domain_type: text (see controlled vocabulary csv file reference)
+  attribute_name: site_id
+  boundary_type: county (see controlled vocabulary csv file reference)
+  boundary_unit_id: FIPS code
+  classification_sys: TBD
+  classification_term: TBD
+  codeset_name: High Water Mark Field Guide
+  codeset_url: https://pubs.er.usgs.gov/publication/tm3A24 
+  completeness: 5 – mostly complete (see controlled vocabulary csv file reference)
+  contact_affiliation: University of Texas (see controlled vocabulary csv file reference)
+  contact_dept: Center for Space Research
+  contact_email: john.doe@gmail.com
+  contact_name: John Doe
+  contact_phone: 111-222-3333
+  contact_role: Steward (see controlled vocabulary csv file reference)
+  creator_name: Jane D. Doe
+  custody_chain: Data collection and creation of dataset performed by USGS. Additional reclass field added by UTCSR
+  data_stage: 5, Data has been fully processed and is ready to use (see controlled vocabulary csv file reference)
+  date_created: 2022-01-01
+  date_last_updated: 2022-02-01
+  date_metadata_updated: 2022-02-01
+  date_submitted: 2022-03-10
+  description: This point dataset represents high water mark observations made by USGS field staff after Hurricane Harvey in Sept 2017 (Sept 9 - Oct 10). High water mark types include debris lines, seed lines, mud lines, direct observation, and other types
+  distribution_method: Published on the USGS website
+  distribution_url: https://waterdata.usgs.gov/tx/nwis/rt
+  distributor_publisher: USGS (see controlled vocabulary csv file reference)
+  domain_value: High Water Mark examples: debris, seed line, vegetation
+  domain_value_descrip: Debris lines are trails of twigs, grasses, and other small debris left on sloping ground at the edge of a river where calmer water, as it receded, deposited the material
+  file_format: GDB, Database (see controlled vocabulary csv file reference)
+  horiz_coord_sys: NAD_1983_2011_Contiguous_USA_Albers (coordinate_systems.csv--see controlled vocabulary csv file reference)
+  horiz_datum: Not Applicable (see controlled vocabulary csv file reference)
+  keyword_term: storm surges, drought
+  keyword_vocab: USGS (see controlled vocabulary csv file reference)
+  license: list the reference to legal rights regarding use of data
+  placename: Texas (see controlled vocabulary csv file reference)
+  process_step_date: 2022-03-01
+  process_step_descrip: Original data was collected and compiled by USGS staff
+  process_step_source: USGS (see controlled vocabulary csv file reference)
+  purpose: For future flood forecasting, predicting severity of future floods, and delineating floodplain maps
+  scale: Regional (see controlled vocabulary csv file reference)
+  service_endpoint_type: REST (see controlled vocabulary csv file reference)
+  software_name: Esri ArcPro (see controlled vocabulary csv file reference)
+  software_version: 2.8
+  spatial_accuracy: 5,90+% accurately overlay basemaps (see controlled vocabulary csv file reference)
+  spatial_data_type: 3,vector - polygon,"counties, cities, building footprints" (see controlled vocabulary csv file reference)
+  spatial_extent: 31.555, 27.555, -97.555, -101.555
+  time_period_covered: USGS High Water Marks
+  title: USGS High Water Marks
+  update_freq: Annually (see controlled vocabulary csv file reference)
+  use_constraint: Restricted (see controlled vocabulary csv file reference)
+  value_range_max: 26
+  value_range_min: 1
+  vert_coord_sys: NAVD-88 (coordinate_systems.csv--see controlled vocabulary csv file reference)
