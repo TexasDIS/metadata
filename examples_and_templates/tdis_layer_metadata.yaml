@@ -1,16 +1,16 @@
 global_attributes:
   accessibility: 5,Data are accessible online via service endpoints (see controlled vocabulary csv file reference)
   attribute_accuracy: Attributes are approximately 90% complete. Some fields have missing values. HWM types were evaluted with an automated comparison to the notes and description fields. A handful were reclassified in the Type_Reclass field. Note: many null values are null on purpose, for instance, not all water marks need additionl notes
-  attribute_descrip: Unique identification number for the site where the data was collected
-  attribute_domain_type: text (see controlled vocabulary csv file reference)
-  attribute_name: site_id
+  attribute_descrip: Unique identification number for the site where the data was collected (*for each attribute field in the data)
+  attribute_domain_type: text (*for each attribute field in the data. See controlled vocabulary csv file reference)
+  attribute_name: site_id (*list all of the data attribute fields)
   boundary_type: county (see controlled vocabulary csv file reference)
   boundary_unit_id: FIPS code
   classification_sys: TBD
   classification_term: TBD
   codeset_name: High Water Mark Field Guide
   codeset_url: https://pubs.er.usgs.gov/publication/tm3A24 
-  completeness: 5, mostly complete (see controlled vocabulary csv file reference)
+  completeness: 5,mostly complete (see controlled vocabulary csv file reference)
   contact_affiliation: University of Texas (see controlled vocabulary csv file reference)
   contact_dept: Center for Space Research
   contact_email: john.doe@gmail.com
@@ -19,7 +19,7 @@ global_attributes:
   contact_role: Steward (see controlled vocabulary csv file reference)
   creator_name: Jane D. Doe
   custody_chain: Data collection and creation of dataset performed by USGS. Additional reclass field added by UTCSR
-  data_stage: 5, Data has been fully processed and is ready to use (see controlled vocabulary csv file reference)
+  data_stage: 5,Data has been fully processed and is ready to use (see controlled vocabulary csv file reference)
   date_created: 2022-01-01
   date_last_updated: 2022-02-01
   date_metadata_updated: 2022-02-01
@@ -46,9 +46,9 @@ global_attributes:
   software_name: Esri ArcPro (see controlled vocabulary csv file reference)
   software_version: 2.8
   spatial_accuracy: 5,90+% accurately overlay basemaps (see controlled vocabulary csv file reference)
-  spatial_data_type: 3,vector - polygon,"counties, cities, building footprints" (see controlled vocabulary csv file reference)
+  spatial_data_type: vector - polygon,"counties, cities, building footprints" (see controlled vocabulary csv file reference)
   spatial_extent: 31.555, 27.555, -97.555, -101.555
-  time_period_covered: USGS High Water Marks
+  time_period_covered: 2018-08-01, 2019-07-31
   title: USGS High Water Marks
   update_freq: Annually (see controlled vocabulary csv file reference)
   use_constraint: Restricted (see controlled vocabulary csv file reference)
