@@ -26,7 +26,6 @@ global_attributes:
   model_dim: 1D (see controlled vocabulary csv file reference)
   model_type: Hydraulic (see controlled vocabulary csv file reference)
   object_version: 11
-  placename: Texas (see controlled vocabulary csv file reference)
   purpose: For future flood forecasting, predicting severity of future floods, and delineating floodplain maps
   scale: Local (see controlled vocabulary csv file reference)
   service_endpoint_type: REST (see controlled vocabulary csv file reference)
