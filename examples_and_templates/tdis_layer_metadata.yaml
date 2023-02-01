@@ -36,15 +36,12 @@ global_attributes:
   keyword_term: storm surges, drought
   keyword_vocab: USGS (see controlled vocabulary csv file reference)
   license: list the reference to legal rights regarding use of data
-  placename: Texas (see controlled vocabulary csv file reference)
   process_step_date: 2022-03-01
   process_step_descrip: Original data was collected and compiled by USGS staff
   process_step_source: USGS (see controlled vocabulary csv file reference)
   purpose: For future flood forecasting, predicting severity of future floods, and delineating floodplain maps
   scale: Regional (see controlled vocabulary csv file reference)
   service_endpoint_type: REST (see controlled vocabulary csv file reference)
-  software_name: Esri ArcPro (see controlled vocabulary csv file reference)
-  software_version: 2.8
   spatial_accuracy: 5,90+% accurately overlay basemaps (see controlled vocabulary csv file reference)
   spatial_data_type: vector - polygon,"counties, cities, building footprints" (see controlled vocabulary csv file reference)
   spatial_extent: 31.555, 27.555, -97.555, -101.555
