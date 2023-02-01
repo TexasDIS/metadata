@@ -23,15 +23,11 @@ global_attributes:
   keyword_term: storm surges, drought
   keyword_vocab: USGS (see controlled vocabulary csv file reference)
   license: list the reference to legal rights regarding use of data
-  object_version: 5
-  placename: Texas (see controlled vocabulary csv file reference)
   process_step_date: 2022-03-01
   process_step_descrip: Original data was collected and compiled by USGS staff
   process_step_source: USGS (see controlled vocabulary csv file reference)
   purpose: For future flood forecasting, predicting severity of future floods, and delineating floodplain maps
   service_endpoint_type: REST (see controlled vocabulary csv file reference)
-  software_name: ArcGIS Desktop (see controlled vocabulary csv file reference)
-  software_version: 10.2
   time_period_covered: 2020-07-01, 2021-09-30
   title: USGS High Water Marks
   update_freq: Annually (see controlled vocabulary csv file reference)
