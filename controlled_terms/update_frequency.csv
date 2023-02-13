@@ -1,0 +1,15 @@
+term,description
+Realtime,Data is available as soon as it is required
+Near-Realtime,Data is processed slightly slower than real-time. Can be delayed by seconds or minutes
+Hourly,Data is delivered on an hourly basis
+Daily,Data is delivered once a day
+Weekly,Data is delivered once per week
+Monthly,Data is delivered once per month
+Quarterly,Data is delivered once ever 4 months
+Biannually,Data is delivered twice per year
+Annually,Data is delivered once per year
+2 or More Years,Data is delivered once every 2 or more years
+Rarely Needed,Updates rarely needed
+None,There are no regilarly occuring deliveries of data
+Other,Other frequency
+Unknown,Frequency is unknown

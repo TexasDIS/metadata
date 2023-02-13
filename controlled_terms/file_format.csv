@@ -1,0 +1,28 @@
+format,description
+SHP,Geospatial vector data format for GIS software. Developed / regulated by ESRI.
+LAS,LiDAR Point Cloud
+LAZ,Compressed LiDAR Point Cloud
+DEM,Digital Elevation Model Raster 
+GeoTIFF,Geospatial raster format
+CSV,A comma-separated values (CSV) file is a delimited text file that uses a comma to separate values.
+XLS,Excel binary file format for representing tabular data
+XLSX,Similar to XLS except it is  based on Microsoft Office Open XML format. Often used to represent larger tabular data
+PDF,Portable Document Format. Created by Adobe. It can be used in multiple platforms.
+DOC,"Microsoft Word binary file format. Created for Windows, but can be also used in macOS."
+DOCX,"Similar to DOC, but is more efficient and creates smaller, less corruptable files"
+PNG,Portable Network Graphic. A type of raster image file
+JPG,Lossy compression format for digital images
+MOV,Video
+MP4,Video
+TXT,Plain Text
+MD,Formatted Text
+GeoJSON,Formatted Text
+JSON,Formatted Text
+XML,Formatted Text
+YML,Formatted Text
+Python,Code
+R,Code
+IMG,Bitmap files containing image data
+JavaScript,Code
+GDB,Database 
+Other,A file format not listed in this controlled vocabulary

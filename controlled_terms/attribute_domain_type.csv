@@ -1,0 +1,5 @@
+term,description
+Code Set,"An established list of all possible alphanumeric codes and the desciptions. It is sometimes published and available online, but not always. "
+Enumerated List,A list of all possible alphanumeric codes and the descriptions 
+Range,A range of either numbers or letters (i.e. 1-25 or A-Z)
+Text,Free text entered by the creator of the dataset (i.e. - a title or dept name). There is no established set of codes.

@@ -1,0 +1,9 @@
+term,description
+Digital Object Creator,"Contact responsible for contributing to the creation of the digital object. Also referred to as an ""author"", ""contributor"", ""originator""."
+Metadata Creator,Contact responsible for creating the TDIS metadata record describing the digital object.
+Submitter,Contact responsible for uploading or transferring the digital object to TDIS.
+Curator,"Contact responsible for the quality, completeness, and formatting of the digital object and its metadata to enable reuse."
+Maintainer,"Contact responsible for updating and maintaining versions of the digital object when content changes, often used for software. "
+Steward,Contact responsible for ensuring appropriate long-term stewardship of the digital object in terms of storage and access.
+Rights Holder,"Contact controlling copyrights or other intellectual property rights over the digital object, responsible for determining licenses."
+Other,Contact with another role or responsibility toward the digital object.
