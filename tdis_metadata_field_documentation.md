@@ -27,7 +27,7 @@ Each metadata field below is defined with the following elements:
 - **Field Name**: A display name for the metadata field.
 - **Description**: Text describing the information that the metadata field should contain as a value. 
 - **Use**: An indication of whether the metadata field is "Required", "Recommended", "Strongly Recommended", or "Optional" within the level (e.g. Collection, Artifact, Data Layer, Feature).
-- **Conditional**: Choices are “Y” or “No”. “Y” means a related field has been entered therefore requiring the current field to be also be completed. ”No” means there is no related field requiring the current field to be completed.
+- **Conditional**: Choices are “Y” or “N”. “Y” means a related field has been entered therefore requiring the current field to be also be completed. ”N” means there is no related field requiring the current field to be completed.
 - **Use Condition**: The name of the related field which when entered, requires or triggers the need to complete the current field as well. 
 - **Accepts Multiple Values**: "Yes" indicating that multiple values can be added to the metadata field, or "No".
 - **Format**: Indication of the type of value the field takes, this will be used for validation.
