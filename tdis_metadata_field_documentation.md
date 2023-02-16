@@ -34,7 +34,6 @@ Each metadata field below is defined with the following elements:
 - **Controlled Terms URL**: A link to published terms that are valid.
 
 # Artifact
-# Artifact
 **Field Name**: Accessibility  
 **Description**: How accessible is the data?  Is the data readily available online or must it be requested from the host?  Are there tools online to easily download the files? If it fully accessible as a web service?  
 **Use**: Required  
@@ -342,7 +341,6 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/use_constraint.csv  
 
 # Collection
-# Collection
 **Field Name**: Chain of Custody  
 **Description**: A statement of any changes in ownership and custody of the digital object since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the digital object.  
 **Use**: Recommended  
@@ -488,7 +486,6 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: None  
 
 # Feature
-# Feature
 **Field Name**: Collection Method  
 **Description**: The procedure, technique, or mode of inquiry used to attain data. Also referred to as "Data Capture Method".  
 **Use**: Strongly Recommended  
@@ -561,7 +558,6 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/datum.csv  
 
-# Layer
 # Layer
 **Field Name**: Accessibility  
 **Description**: How accessible is the data?  Is the data readily available online or must it be requested from the host?  Are there tools online to easily download the files? If it fully accessible as a web service?  
@@ -1041,7 +1037,6 @@ Each metadata field below is defined with the following elements:
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/use_constraint.csv  
 
 # Model
-# Model
 **Field Name**: Accessibility  
 **Description**: How accessible is the data?  Is the data readily available online or must it be requested from the host?  Are there tools online to easily download the files? If it fully accessible as a web service?  
 **Use**: Required  
@@ -1402,7 +1397,6 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/use_constraint.csv  
 
-# Model Configuration
 # Model Configuration
 **Field Name**: Input File  
 **Description**: The TDIS unique identifier for an Artifact or Layer serving as input.  
