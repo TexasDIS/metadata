@@ -14,7 +14,6 @@ global_attributes:
   data_stage: 5,Data has been fully processed and is ready to use (see controlled vocabulary csv file reference)
   date_created: 2022-01-01
   date_last_updated: 2022-02-01
-  date_metadata_updated: 2022-02-01
   date_submitted: 2022-03-10
   description: This model run represents flooding simulations made by USGS field staff after Hurricane Harvey in Sept 2017 (Sept 9 - Oct 10)
   distribution_method: Published on the USGS website
