@@ -1,5 +1,5 @@
 # TDIS Metadata Documentation
-*Last revised: 2023-02-22*
+*Last revised: 2023-04-20*
 
 ## Metadata Organization
 Within the current TDIS model, "collections" contain "artifacts", "data layers", and "models." 
@@ -97,6 +97,15 @@ Each metadata field below is defined with the following elements:
 **Accepts Multiple Values**: No  
 **Format**: Text  
 **Controlled Terms URL**: None  
+
+**Field Name**: File Format  
+**Description**: The file format of the digital object. Used when a data files are uploaded to TDIS.  
+**Use**: Strongly Recommended  
+**Conditional**: No  
+**Use Condition**: None  
+**Accepts Multiple Values**: Yes  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/file_format.csv  
 
 **Field Name**: Keyword Term  
 **Description**: Subject matter keywords  
@@ -447,21 +456,30 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/accessibility.csv  
 
-**Field Name**: Boundary Type  
-**Description**: The type of geospatial boundary associated with the digital object.   
-**Use**: Optional  
-**Conditional**: No  
-**Use Condition**: None  
+**Field Name**: Boundary Name  
+**Description**: The geospatial boundary associated with the digital object. User is required to either provide this boundary name field or the spatial extent field.   
+**Use**: Required  
+**Conditional**: Yes  
+**Use Condition**: Boundary Type  
 **Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/boundary_type.csv  
+
+**Field Name**: Boundary Type  
+**Description**: The type of geospatial boundary associated with the digital object. User is required to either provide this boundary name field or the spatial extent field.   
+**Use**: Required  
+**Conditional**: No  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: TBD  
 
 **Field Name**: Boundary Unit Identifier  
 **Description**: The unique identifier for a geospatial boundary unit of a particular type, such as a name or code.  
 **Use**: Optional  
 **Conditional**: Yes  
 **Use Condition**: Boundary Type  
-**Accepts Multiple Values**: Yes  
+**Accepts Multiple Values**:   
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/boundary_type.csv  
 
@@ -931,21 +949,30 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/accessibility.csv  
 
-**Field Name**: Boundary Type  
-**Description**: The type of geospatial boundary associated with the digital object.   
-**Use**: Optional  
-**Conditional**: No  
-**Use Condition**: None  
+**Field Name**: Boundary Name  
+**Description**: The geospatial boundary associated with the digital object. User is required to either provide this boundary name field or the spatial extent field.   
+**Use**: Required  
+**Conditional**: Yes  
+**Use Condition**: Boundary Type  
 **Accepts Multiple Values**: Yes  
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/boundary_type.csv  
+
+**Field Name**: Boundary Type  
+**Description**: The type of geospatial boundary associated with the digital object. User is required to either provide this boundary name field or the spatial extent field.   
+**Use**: Required  
+**Conditional**: No  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: TBD  
 
 **Field Name**: Boundary Unit Identifier  
 **Description**: The unique identifier for a geospatial boundary unit of a particular type, such as a name or code.  
 **Use**: Optional  
 **Conditional**: Yes  
 **Use Condition**: Boundary Type  
-**Accepts Multiple Values**: Yes  
+**Accepts Multiple Values**:   
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/boundary_type.csv  
 
@@ -1003,6 +1030,15 @@ Each metadata field below is defined with the following elements:
 **Format**: Controlled Terms  
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_vocabulary.csv  
 
+**Field Name**: Model Config File  
+**Description**: File or files required for running the model.  
+**Use**: Required  
+**Conditional**:   
+**Use Condition**:   
+**Accepts Multiple Values**: Yes  
+**Format**:   
+**Controlled Terms URL**:   
+
 **Field Name**: Model Dimension  
 **Description**: Dimensionality choice of a terrain model (1D, 2D, 3D, or combos) created prior to running hydro model computations.  
 **Use**: Required  
@@ -1011,6 +1047,24 @@ Each metadata field below is defined with the following elements:
 **Accepts Multiple Values**: Yes  
 **Format**:   
 **Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/model_dimension.csv  
+
+**Field Name**: Model Software Name  
+**Description**: The name of the model software used to create or work with the digital object.  
+**Use**: Required   
+**Conditional**: No  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Controlled Terms  
+**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/software.csv  
+
+**Field Name**: Model Software Version  
+**Description**: The version of the software used to create or work with the digital object.  
+**Use**: Required  
+**Conditional**: No  
+**Use Condition**: None  
+**Accepts Multiple Values**: No  
+**Format**: Numeric  
+**Controlled Terms URL**: None  
 
 **Field Name**: Model Type  
 **Description**: The type of model.  
@@ -1028,24 +1082,6 @@ Each metadata field below is defined with the following elements:
 **Use Condition**: None  
 **Accepts Multiple Values**: No  
 **Format**: Text  
-**Controlled Terms URL**: None  
-
-**Field Name**: Software Name  
-**Description**: The name of the software used to create or work with the digital object.  
-**Use**: Required for Model, Optional for Artifact  
-**Conditional**: No  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Controlled Terms  
-**Controlled Terms URL**: https://github.com/TexasDIS/metadata/blob/main/controlled_terms/software.csv  
-
-**Field Name**: Software Version  
-**Description**: The version of the software used to create or work with the digital object.  
-**Use**: Required for Model, Optional for Artifact  
-**Conditional**: No  
-**Use Condition**: None  
-**Accepts Multiple Values**: No  
-**Format**: Numeric  
 **Controlled Terms URL**: None  
 
 **Field Name**: Title  
