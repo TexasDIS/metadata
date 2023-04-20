@@ -1,20 +1,20 @@
-,status,metadata_level,metadata_group,display_name,definition,example,use,conditional,use_condition,accepts_mulitple_values,validation,published_terms
-25,Core,Collection,Reuse,Chain of Custody,"A statement of any changes in ownership and custody of the digital object since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the digital object.",Data collection and creation of dataset performed by USGS. Additional reclass field added by UTCSR.,Recommended,No,None,Yes,Text,None
-14,Core,Collection,Administrative,Collection Identifier,The TDIS unique identifier for the associated collection.,TBD,Required_internal,No,None,No,TDIS Identifier: UUID,None
-18,Core,Collection,Contact Information,Contact Affiliation,Organizational affiliation for the responsible point of contact.,University of Texas,Required,No,None,Yes,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization.csv
-19,Core,Collection,Contact Information,Contact Department,Dept under the Contact Affiliation,Center for Space Research,Required,Yes,Contact Affiliation,Yes,Text,
-20,Core,Collection,Contact Information,Contact Email,Email for the responsible point of contact.,john.doe@gmail.com,Required,Yes,Contact Name,Yes,Text,None
-21,Core,Collection,Contact Information,Contact Name,Name of a person who is a responsible point of contact.,John Doe,Required,,None,Yes,Text,None
-22,Core,Collection,Contact Information,Contact Phone Number,Work phone number for the responsible point of contact.,111-2222-3333,Required,Yes,Contact Name,Yes,Text,None
-23,Core,Collection,Contact Information,Contact Role,The role(s) of the point of contact toward the digital object and its management.,"Submitter, Curator, Steward",Recommended,Yes,Contact Name,Yes,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/contact_role.csv
-31,Core,Collection,Discovery,Description ,"An account of the digital object. The description may include an abstract, a table of contents, or a free-text account.","""This point dataset represents high water mark observations made by USGS field staff after Hurricane Harvey in Sept 2017  (Sept 9 - Oct 10). 
+,status,display_name,metadata_level,metadata_group,definition,example,use,conditional,use_condition,accepts_mulitple_values,validation,published_terms
+26,Core,Chain of Custody,Collection,Reuse,"A statement of any changes in ownership and custody of the digital object since its creation that are significant for its authenticity, integrity, and interpretation. The statement may include a description of any changes successive custodians made to the digital object.",Data collection and creation of dataset performed by USGS. Additional reclass field added by UTCSR.,Recommended,No,None,Yes,Text,None
+15,Core,Collection Identifier,Collection,Administrative,The TDIS unique identifier for the associated collection.,TBD,Required_internal,No,None,No,TDIS Identifier: UUID,None
+19,Core,Contact Affiliation,Collection,Contact Information,Organizational affiliation for the responsible point of contact.,University of Texas,Required,No,None,Yes,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/organization.csv
+20,Core,Contact Department,Collection,Contact Information,Dept under the Contact Affiliation,Center for Space Research,Required,Yes,Contact Affiliation,Yes,Text,
+21,Core,Contact Email,Collection,Contact Information,Email for the responsible point of contact.,john.doe@gmail.com,Required,Yes,Contact Name,Yes,Text,None
+22,Core,Contact Name,Collection,Contact Information,Name of a person who is a responsible point of contact.,John Doe,Required,,None,Yes,Text,None
+23,Core,Contact Phone Number,Collection,Contact Information,Work phone number for the responsible point of contact.,111-2222-3333,Required,Yes,Contact Name,Yes,Text,None
+24,Core,Contact Role,Collection,Contact Information,The role(s) of the point of contact toward the digital object and its management.,"Submitter, Curator, Steward",Recommended,Yes,Contact Name,Yes,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/contact_role.csv
+32,Core,Description ,Collection,Discovery,"An account of the digital object. The description may include an abstract, a table of contents, or a free-text account.","""This point dataset represents high water mark observations made by USGS field staff after Hurricane Harvey in Sept 2017  (Sept 9 - Oct 10). 
 High water mark types include debris lines, seed lines, mud lines, direct observation, and other types. 
 ",Required,No,None,No,Text,None
-41,Core,Collection,Administrative,Identifier,The TDIS unique identifier for the digital object.,,Required_internal,No,None,No,TDIS Identifier: UUID,None
-43,Core,Collection,Discovery,Keyword Term,Subject matter keywords,"storm surges, drought",Required,No,Keyword Vocabulary,Yes,Array:Text,None
-47,Core,Collection,Discovery,Keyword Vocabulary,Vocabulary for subject matter keywords listed in Keyword Term.,"AGROVOC, USGS",Recommended,Yes,Keyword Terms,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_vocabulary.csv
-58,Core,Collection,Discovery,Purpose,A description of the purpose for the creation of this digital object and/or the expected use.,"For future flood forecasting, predicting severity of future floods, and delineating floodplain maps
+42,Core,Identifier,Collection,Administrative,The TDIS unique identifier for the digital object.,,Required_internal,No,None,No,TDIS Identifier: UUID,None
+44,Core,Keyword Term,Collection,Discovery,Subject matter keywords,"storm surges, drought",Required,No,Keyword Vocabulary,Yes,Array:Text,None
+48,Core,Keyword Vocabulary,Collection,Discovery,Vocabulary for subject matter keywords listed in Keyword Term.,"AGROVOC, USGS",Recommended,Yes,Keyword Terms,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/keyword_vocabulary.csv
+59,Core,Purpose,Collection,Discovery,A description of the purpose for the creation of this digital object and/or the expected use.,"For future flood forecasting, predicting severity of future floods, and delineating floodplain maps
 ",Optional,No,None,No,Text,None
-59,Core,Collection,Coverage,Scale,The scale of the dataset ,"global, national, regional, local",Recommended,No,None,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/scale_range.csv
-65,Core,Collection,Coverage,Spatial Extent (Decimal Degrees),"Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.","31.555, 27.555, -97.555, -101.555 ",Required,No,None,Yes,Array: Decimal Degrees or Geometry: Polygon,None
-67,Core,Collection,Discovery,Title,A name given to the digital object.,USGS High Water Marks,Required,No,None,No,Text,None
+60,Core,Scale,Collection,Coverage,The scale of the dataset ,"global, national, regional, local",Recommended,No,None,No,Controlled Terms,https://github.com/TexasDIS/metadata/blob/main/controlled_terms/scale_range.csv
+67,Core,Spatial Extent (Decimal Degrees),Collection,Coverage,"Coordinates for the bounding box describing the spatial extent covered by the digital object, in decimal degrees.","31.555, 27.555, -97.555, -101.555 ",Required,No,None,Yes,Array: Decimal Degrees or Geometry: Polygon,None
+69,Core,Title,Collection,Discovery,A name given to the digital object.,USGS High Water Marks,Required,No,None,No,Text,None
