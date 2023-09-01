@@ -1,0 +1,31 @@
+---
+basic:
+   title: "This is a sample title"
+   description: "This is a sample description"
+   purpose: "This is a sample Purpose"
+   creator: "The name of the person or org contributing to the initial creation"
+   keyword-term: subject matter keywords                
+   update-frequency: How often is this content updated 
+   use-constraint: Constraints or restrictions on use of the digital object
+
+contact:
+   contact-affiliation: Organizational affiliation for the responsible point of contact
+   contact-department: Depot under the Contact Affiliation
+   contact-email: Email for the responsible point of contact
+   contact-name: Name of a person who is responsible point of contact 
+   contact-phone-number: Work phone number for the responsible point of contact
+
+spatial-information:
+   spatial-data-type: The type of spatial data
+   spatial-extent-decimal-degrees: Coordinates for the bounding box describing the spatial extent covered in decimal degrees. This or boundary name is required
+   boundary-name:  The geospatial boundary associated. User is required to either provide this or the Spatial Extent field
+
+models:
+   model-software-name: The name of the model software used
+   model-software-version: The version of the software used
+   model-type: The type of model
+   model-input: The name of an Artifact or Layer serving as input
+   model-output: The name of an Artifact or Layer serving as output
+   model-config-file: file or files required as parameters fo running the model
+   
+   
