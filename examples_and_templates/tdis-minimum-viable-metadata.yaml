@@ -19,7 +19,8 @@ spatial-information:
    spatial-data-type: The type of spatial data
    spatial-extent-decimal-degrees: Coordinates for the bounding box describing the spatial extent covered in decimal degrees. This or boundary name is required
    boundary-name:  The geospatial boundary associated. User is required to either provide this or the Spatial Extent field
-
+   horizontal-coordinate-system : A projected coordinate system is a planar system that uses two-dimensional coordinates and linear distance measurements as units
+   
 models:
    model-software-name: The name of the model software used
    model-software-version: The version of the software used
