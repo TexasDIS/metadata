@@ -1,5 +1,9 @@
 ---
 basic:
+   region: "The region uploading the dataset/model"
+   huc: "The hydro;ogic unit code associated with the model or dataset if applicable"
+   county: "The county that the model or dataset spans"
+   city: "The city that the model or dataset spans"
    title: "This is a sample title"
    description: "This is a sample description"
    purpose: "This is a sample Purpose"
